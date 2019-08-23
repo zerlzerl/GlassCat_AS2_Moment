@@ -74,12 +74,10 @@
         
         
     </div>
-    <div class="navbar-fixed-bottom" style="text-align:center;">
+    <footer class="navbar navbar-fixed-bottom" style="text-align:center;">
         <hr />
-        <footer>
-            <p>&copy; <%: DateTime.Now.Year %> - Monny & Micheal</p>
-        </footer>
-    </div>
+        <p>&copy; <%: DateTime.Now.Year %> - Monny & Micheal</p>
+    </footer>
     
     <script type="text/javascript" src="/Resources/jquery-1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="/Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
