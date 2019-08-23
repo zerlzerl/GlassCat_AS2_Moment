@@ -20,25 +20,23 @@
                         <!-- username field -->
                         <div class="form-group has-feedback">
                             <asp:TextBox ID="loginUsername" runat="server" CssClass="form-control" placeholder="Username" />
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>                            
+                            <span class="glyphicon glyphicon-user form-control-feedback"></span>     
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="loginUsername" ErrorMessage="Error: Username cannot be empty" />
                         </div>
                         <!-- password field -->
                         <div class="form-group has-feedback">
                             <asp:TextBox ID="loginPassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Password" />
                             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="loginPassword" ErrorMessage="Error: Password cannot be empty" />
                         </div>
                         <hr />
                         <div class="row">
                             <div class="col-xs-12">
                                 <asp:Button ID="loginBtn" Text="Login" runat="server" OnClick="ValidateUser" Class="btn btn-primary btn-block" />
+
                             </div>
-                        </div>                        
-                        <br />
-                        <br />
-                        <!-- username required validator -->
-                        <asp:RequiredFieldValidator runat="server" CssClass="alert alert-warning" ControlToValidate="loginUsername" ErrorMessage="Username cannot be empty" />
-                        <!-- password required validator -->
-                        <asp:RequiredFieldValidator runat="server" CssClass="alert alert-warning" ControlToValidate="loginPassword" ErrorMessage="Password cannot be empty" />
+                        </div>
+                        
                     </form>
 
 
