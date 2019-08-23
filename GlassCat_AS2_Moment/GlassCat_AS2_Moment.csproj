@@ -78,6 +78,8 @@
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\SiteMap.aspx" />
+    <Content Include="Resources\adminlte\AdminLTE.min.css" />
+    <Content Include="Resources\adminlte\adminlte.min.js" />
     <Content Include="Resources\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
     <Content Include="Resources\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
     <Content Include="Resources\bootstrap-3.3.7-dist\css\bootstrap.css" />
@@ -87,6 +89,8 @@
     <Content Include="Resources\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
     <Content Include="Resources\bootstrap-3.3.7-dist\js\npm.js" />
     <Content Include="Resources\css\site.css" />
+    <Content Include="Resources\img\photo2.png" />
+    <Content Include="Resources\img\user1-128x128.jpg" />
     <Content Include="Resources\jquery-1.12.4\jquery.js" />
     <Content Include="Resources\jquery-1.12.4\jquery.min.js" />
     <Content Include="Web.config" />
