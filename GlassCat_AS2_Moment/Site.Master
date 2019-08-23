@@ -43,7 +43,7 @@
                 <li class="<%: Page.Title == "History" ? "active":"" %>"><a href="/Pages/History.aspx">Our history</a></li>
                 <li class="<%: Page.Title == "FAQ" ? "active":"" %>"><a href="/Pages/FAQ.aspx">FAQ</a></li>                
               </ul>
-            </li>
+            </li> 
             <li class="<%: Page.Title == "Site map" ? "active":"" %>"><a href="/Pages/SiteMap.aspx">Site map</a></li>
             <li class="<%: Page.Title == "Documentation" ? "active":"" %>"><a href="/Pages/Documentation.aspx">Documentation</a></li>
             <li class="<%: Page.Title == "Email" ? "active":"" %>"><a href="/Pages/Email.aspx">Email</a></li>
