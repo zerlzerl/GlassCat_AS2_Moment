@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link type="text/css" rel="stylesheet" href="~/Resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="~/Resources/adminlte/AdminLTE.min.css"/>
     <link type="text/css" rel="stylesheet" href="~/Resources/css/site.css"/> <!-- common style sheet for the whole site -->
     <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
@@ -82,5 +83,6 @@
     
     <script type="text/javascript" src="/Resources/jquery-1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="/Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Resources/adminlte/adminlte.min.js"></script>
 </body>
 </html>
