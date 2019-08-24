@@ -1,16 +1,19 @@
 ﻿<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GlassCat_AS2_Moment.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <div class="jumbotron">
-        
 
-        <div style="text-align:center; margin-bottom:40px;">
+
+        <div style="text-align: center; margin-bottom: 40px;">
             <h2>GlassCat</h2>
-            <h3 style="color:coral">Cats are like glasses deserving special care.</h3>
+            <h3 style="color: coral">Cats are like glasses deserving special care.</h3>
         </div>
-        <p>This website is designed for those who love cats no matter whether they own one or not. 
-            They can share with other users their thoughts as well as photos of lovely cats here.</p>
+        <p>
+            This website is designed for those who love cats no matter whether they own one or not. 
+            They can share with other users their thoughts as well as photos of lovely cats here.
+        </p>
 
         <div class="row">
             <!-- Personal center -->
@@ -134,22 +137,20 @@
             </div>
             <!-- /.col -->
 
-          </div>
-          <!-- /.row -->
+        </div>
+        <!-- /.row -->
 
-        <form id="form1" runat="server">
-            <div style="text-align:center;">  
-                <asp:ScriptManager ID="ScriptManager1" runat="server" />  
-                <asp:Timer ID="Timer1" Interval="2000" runat="server" />  
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">  
-                    <Triggers>  
-                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />  
-                    </Triggers>  
-                    <ContentTemplate>  
-                        <asp:AdRotator ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml"/> 
-                    </ContentTemplate>  
-                </asp:UpdatePanel>  
-            </div> 
-        </form>
+        <div style="text-align: center;">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" />
+            <asp:Timer ID="Timer1" Interval="2000" runat="server" />
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                </Triggers>
+                <ContentTemplate>
+                    <asp:AdRotator ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
     </div>
 </asp:Content>

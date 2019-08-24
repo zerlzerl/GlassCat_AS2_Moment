@@ -214,6 +214,7 @@
     <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Resources\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Pages\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

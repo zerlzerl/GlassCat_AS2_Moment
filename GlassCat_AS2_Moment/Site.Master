@@ -4,58 +4,73 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link type="text/css" rel="stylesheet" href="~/Resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="~/Resources/adminlte/AdminLTE.min.css"/>
-    <link type="text/css" rel="stylesheet" href="~/Resources/font-awesome/css/font-awesome.min.css"/>
-    <link type="text/css" rel="stylesheet" href="~/Resources/css/site.css"/> <!-- common style sheet for the whole site -->
+    <link type="text/css" rel="stylesheet" href="~/Resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Resources/adminlte/AdminLTE.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Resources/font-awesome/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Resources/css/site.css" />
+    <!-- common style sheet for the whole site -->
     <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 
     <title><%: Page.Title %> - GlassCat</title>
     <%--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
-
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">GlassCat</a>
-        </div>
+    <form runat="server">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">GlassCat</a>
+                </div>
 
-        <%-- Collect the nav links, forms, and other content for toggling --%>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="<%: Page.Title == "Register" ? "active":"" %>"><a href="/Register.aspx">Register</a></li>
-            <li class="dropdown <%: (Page.Title == "About us" || Page.Title == "History" || Page.Title == "FAQ") ? "active":"" %>">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="<%: Page.Title == "About us" ? "active":"" %>"><a href="/Pages/About.aspx">About us</a></li>
-                <li class="<%: Page.Title == "History" ? "active":"" %>"><a href="/Pages/History.aspx">Our history</a></li>
-                <li class="<%: Page.Title == "FAQ" ? "active":"" %>"><a href="/Pages/FAQ.aspx">FAQ</a></li>                
-              </ul>
-            </li> 
-            <li class="<%: Page.Title == "Site map" ? "active":"" %>"><a href="/Pages/SiteMap.aspx">Site map</a></li>
-            <li class="<%: Page.Title == "Documentation" ? "active":"" %>"><a href="/Pages/Documentation.aspx">Documentation</a></li>
-            <li class="<%: Page.Title == "Email" ? "active":"" %>"><a href="/Pages/Email.aspx">Email</a></li>
-            <li class="<%: Page.Title == "Calendar" ? "active":"" %>"><a href="/Pages/Calendar.aspx">Calendar</a></li>
-            
-          </ul>
-          
-          <ul class="nav navbar-nav navbar-right">
-            <li class="<%: Page.Title == "Login" ? "active":"" %>">
-                <a href="/Login.aspx">Login</a></li>
-            <%--<li class="dropdown">
+                <%-- Collect the nav links, forms, and other content for toggling --%>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="<%: Page.Title == "Register" ? "active":"" %>"><a href="/Register.aspx">Register</a></li>
+                        <li class="dropdown <%: (Page.Title == "About us" || Page.Title == "History" || Page.Title == "FAQ") ? "active":"" %>">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="<%: Page.Title == "About us" ? "active":"" %>"><a href="/Pages/About.aspx">About us</a></li>
+                                <li class="<%: Page.Title == "History" ? "active":"" %>"><a href="/Pages/History.aspx">Our history</a></li>
+                                <li class="<%: Page.Title == "FAQ" ? "active":"" %>"><a href="/Pages/FAQ.aspx">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="<%: Page.Title == "Site map" ? "active":"" %>"><a href="/Pages/SiteMap.aspx">Site map</a></li>
+                        <li class="<%: Page.Title == "Documentation" ? "active":"" %>"><a href="/Pages/Documentation.aspx">Documentation</a></li>
+                        <li class="<%: Page.Title == "Email" ? "active":"" %>"><a href="/Pages/Email.aspx">Email</a></li>
+                        <li class="<%: Page.Title == "Calendar" ? "active":"" %>"><a href="/Pages/Calendar.aspx">Calendar</a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right" style="margin-right: 5px;">
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a runat="server" href="~/Login.aspx">Login</a></li>
+                                </ul>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Logout" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </li>
+                                </ul>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                        <%--<li class="<%: Page.Title == "Login" ? "active":"" %>">
+                <a href="/Login.aspx">Login</a></li>--%>
+                        <%--<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
@@ -65,23 +80,27 @@
                 <li><a href="#">Separated link</a></li>
               </ul>
             </li>--%>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav><!-- /.navbar-default -->
-    <div class="container body-content">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
-        </asp:ContentPlaceHolder>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- /.navbar-default -->
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
 
-        <hr />
-        <footer style="text-align:center; color:#808080">
-            <p>&copy; <%: DateTime.Now.Year %> - Monny & Micheal</p>
-        </footer>
-    </div>
-    
-    
-    <script type="text/javascript" src="/Resources/jquery-1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/Resources/adminlte/adminlte.min.js"></script>
+            <hr />
+            <footer style="text-align: center; color: #808080">
+                <p>&copy; <%: DateTime.Now.Year %> - Monny & Micheal</p>
+            </footer>
+        </div>
+
+
+        <script type="text/javascript" src="/Resources/jquery-1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="/Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/Resources/adminlte/adminlte.min.js"></script>
+    </form>
 </body>
 </html>
