@@ -21,22 +21,40 @@
                         <div class="form-group has-feedback">
                             <asp:TextBox ID="loginUsername" runat="server" CssClass="form-control" placeholder="Username" />
                             <span class="glyphicon glyphicon-user form-control-feedback"></span>     
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="loginUsername" ErrorMessage="Error: Username cannot be empty" />
+                            <!-- username required validator -->
+                            <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="loginUsername" 
+                                ErrorMessage="Error: Username cannot be empty" />
                         </div>
                         <!-- password field -->
                         <div class="form-group has-feedback">
                             <asp:TextBox ID="loginPassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Password" />
                             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="loginPassword" ErrorMessage="Error: Password cannot be empty" />
+                            <!-- password required validator -->
+                            <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="loginPassword" 
+                                ErrorMessage="Error: Password cannot be empty" />
                         </div>
                         <hr />
                         <div class="row">
+                            <div class="col-xs-8">
+                                <div class="checkbox icheck" style="margin-left: 20px;">
+                                    <label>
+                                        <asp:CheckBox ID="rememberCheckbox" runat="server" />
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-xs-4">
+                                <asp:Button ID="loginBtn" Text="Sign In" runat="server" OnClick="ValidateUser" Class="btn btn-primary btn-block btn-flat" />
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <div class="row">
                             <div class="col-xs-12">
-                                <asp:Button ID="loginBtn" Text="Login" runat="server" OnClick="ValidateUser" Class="btn btn-primary btn-block" />
-
+                                
+                                <asp:CustomValidator ID="LoginValidator" runat="server" OnServerValidate="LoginValidator_ServerValidate" CssClass="label label-danger"></asp:CustomValidator>
                             </div>
                         </div>
-                        
                     </form>
 
 

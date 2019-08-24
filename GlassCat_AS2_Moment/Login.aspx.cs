@@ -15,22 +15,29 @@ namespace GlassCat_AS2_Moment.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.Page.User.Identity.IsAuthenticated)
-            {
-                Response.Redirect(FormsAuthentication.DefaultUrl);
-            }
+            //if (this.Page.User.Identity.IsAuthenticated)
+            //{
+            //    Response.Redirect(FormsAuthentication.DefaultUrl);
+            //}
         }
 
         protected void ValidateUser(object sender, EventArgs e)
         {
+            // after customer validation, user is validated, username can be used in form authentication
             string username = loginUsername.Text;
-            string password = loginPassword.Text;
-
-            // select sql
-            LoginSqlDataSource.SelectCommand = "SELECT * FROM [user] WHERE [username] = @username AND [password] = @password";
-            // add parameters
-            LoginSqlDataSource.SelectParameters.Add("@username", username);
-            LoginSqlDataSource.SelectParameters.Add("@password", password);
+            FormsAuthentication.SetAuthCookie(username, true);
+            bool isloged = this.Page.User.Identity.IsAuthenticated;
+            string retrnUrl = Request.QueryString["returnUrl"];
+            if (!string.IsNullOrEmpty(retrnUrl))
+            {
+                //Redirect to Original requested page
+                FormsAuthentication.RedirectFromLoginPage(username, rememberCheckbox.Checked);
+            }
+            else
+            {
+                //If user directly opened login page, always show him Homepage.
+                Response.Redirect(FormsAuthentication.DefaultUrl);
+            }
 
             //string username = txtUsername.Text.Trim();
             //string password = txtPassword.Text.Trim();
@@ -71,6 +78,36 @@ namespace GlassCat_AS2_Moment.Pages
             //            break;
             //    }
             //}
+        }
+
+        protected void LoginValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            
+            // must not null
+            string username = loginUsername.Text;
+            string password = loginPassword.Text;
+
+            // select sql
+            LoginSqlDataSource.SelectCommand = "SELECT * FROM [user] WHERE [username] = @username AND [password] = @password";
+
+            // add parameters
+            LoginSqlDataSource.SelectParameters.Clear(); // must clear the parameters first!
+            LoginSqlDataSource.SelectParameters.Add("@username", username);
+            LoginSqlDataSource.SelectParameters.Add("@password", password);
+
+            //execute sql
+            DataView result = (DataView)LoginSqlDataSource.Select(DataSourceSelectArguments.Empty);
+            //string uname = (string)result[0]["username"];
+            if (result.Count == 0)
+            {
+                // login failure
+                args.IsValid = false;
+                LoginValidator.ErrorMessage = "Login fail, please check your username and password.";
+            } else
+            {
+                // found a user by username and password
+                args.IsValid = true;
+            }
         }
     }
 }

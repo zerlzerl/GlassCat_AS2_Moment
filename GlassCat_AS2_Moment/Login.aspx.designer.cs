@@ -49,6 +49,15 @@ namespace GlassCat_AS2_Moment.Pages {
         protected global::System.Web.UI.WebControls.TextBox loginPassword;
         
         /// <summary>
+        /// rememberCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox rememberCheckbox;
+        
+        /// <summary>
         /// loginBtn control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace GlassCat_AS2_Moment.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button loginBtn;
+        
+        /// <summary>
+        /// LoginValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator LoginValidator;
     }
 }

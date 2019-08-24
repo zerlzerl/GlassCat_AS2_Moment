@@ -76,8 +76,8 @@
     <Content Include="Pages\Email.aspx" />
     <Content Include="Pages\FAQ.aspx" />
     <Content Include="Pages\History.aspx" />
-    <Content Include="Pages\Login.aspx" />
-    <Content Include="Pages\Register.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Pages\SiteMap.aspx" />
     <Content Include="Resources\adminlte\AdminLTE.min.css" />
     <Content Include="Resources\adminlte\adminlte.min.js" />
@@ -149,18 +149,18 @@
     <Compile Include="Pages\History.aspx.designer.cs">
       <DependentUpon>History.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Login.aspx.cs">
+    <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Login.aspx.designer.cs">
+    <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Register.aspx.cs">
+    <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Register.aspx.designer.cs">
+    <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SiteMap.aspx.cs">
