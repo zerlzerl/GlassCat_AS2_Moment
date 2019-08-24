@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="~/Resources/font-awesome/css/font-awesome.min.css" />
     <link type="text/css" rel="stylesheet" href="~/Resources/css/site.css" />
     <!-- common style sheet for the whole site -->
+
     <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -26,6 +27,7 @@
 
 </head>
 <body>
+
     <form runat="server">
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
             <div class="container">
@@ -42,6 +44,9 @@
 
                 <%-- Collect the nav links, forms, and other content for toggling --%>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
+
+                    
+
                     <ul class="nav navbar-nav">
                         <li class="<%: Page.Title == "Register" ? "active":"" %>"><a href="/Register.aspx">Register</a></li>
                         <li class="dropdown <%: (Page.Title == "About us" || Page.Title == "History" || Page.Title == "FAQ") ? "active":"" %>">
@@ -93,7 +98,10 @@
             <!-- /.container-fluid -->
         </nav>
         <!-- /.navbar-default -->
+
         <div class="container body-content">
+            
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
 

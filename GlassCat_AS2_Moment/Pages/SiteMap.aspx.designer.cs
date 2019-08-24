@@ -13,6 +13,24 @@ namespace GlassCat_AS2_Moment.Pages {
     public partial class SiteMap {
         
         /// <summary>
+        /// SiteMapDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource2;
+        
+        /// <summary>
+        /// SiteMapPath1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
+        
+        /// <summary>
         /// TreeView1 control.
         /// </summary>
         /// <remarks>
@@ -22,13 +40,31 @@ namespace GlassCat_AS2_Moment.Pages {
         protected global::System.Web.UI.WebControls.TreeView TreeView1;
         
         /// <summary>
-        /// WebsiteTreeView control.
+        /// TreeView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView WebsiteTreeView;
+        protected global::System.Web.UI.WebControls.TreeView TreeView2;
+        
+        /// <summary>
+        /// SiteMapDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
+        
+        /// <summary>
+        /// TreeView3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TreeView TreeView3;
         
         /// <summary>
         /// WebsiteXmlDataSource control.
