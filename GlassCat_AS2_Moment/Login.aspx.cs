@@ -36,7 +36,7 @@ namespace GlassCat_AS2_Moment.Pages
             else
             {
                 //If user directly opened login page, always show him Homepage.
-                Response.Redirect(FormsAuthentication.DefaultUrl);
+                Response.Redirect("/");
             }
 
             //string username = txtUsername.Text.Trim();

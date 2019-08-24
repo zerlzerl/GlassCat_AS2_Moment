@@ -155,4 +155,19 @@
             </asp:UpdatePanel>
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+            QUICK LINK
+            <a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.html">
+                <p>Monash course disclaimer</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+            CONTACT US
+            <a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.html">
+                <p>ysun0069@student.monash.edu</p>
+            </a>
+        </div>
+    </div>
 </asp:Content>

@@ -2,14 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    
-    <ol class="breadcrumb">
+    <div style="background-color:#f0f0f0; padding:10px; font-size:16px;">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" --> ">
+        </asp:SiteMapPath>
+    </div>
+    <%--<ol class="breadcrumb">
         <li><a href="/">Home</a></li>
         <li><a href="/Pages/About.aspx">About us</a></li>
         <li class="active">FAQ</li>
-    </ol>
+    </ol>--%>
     <h2>Some frequently asked questions:</h2>
-    <h3>1. Why do you compare cats as glass?</h3>
+    <h3>Q1. Why do you compare cats as glass?</h3>
     <p>
         Cats are like glass, so soft that it can be of any shape.
         <br />
@@ -20,14 +24,14 @@
         Aren't they alike?
     </p>
     <br />
-    <h3>2. Can I post photos of my lovely cat here?</h3>
+    <h3>Q2. Can I post photos of my lovely cat here?</h3>
     <p>
         Yes, of course. 
         <br />
         This is what our website is designed for.
     </p>
     <br />
-    <h3>3. Can I chat with other users?</h3>
+    <h3>Q3. Can I chat with other users?</h3>
     <p>
         Sorry, but we are working on this feature.
         <br />
