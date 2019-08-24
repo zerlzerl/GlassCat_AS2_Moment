@@ -6,8 +6,9 @@
     <Width>608</Width>
     <NavigateUrl>https://www.petflow.com/cat/food</NavigateUrl>
     <AlternateText>Do you konw how to feed your cat correctly?</AlternateText>
-    <Impressions>50</Impressions>
-    <Keyword>Meera</Keyword>
+    <Impressions>100</Impressions>
+    <Caption>Find something wonderful for your cat in PetFlow!</Caption>
+    <Keyword>feedCat</Keyword>
   </Ad>
   <Ad>
     <ImageUrl>Resources/img/careCat.png</ImageUrl>
@@ -16,15 +17,17 @@
     <NavigateUrl>https://www.purina.com/cats/cat-breeds</NavigateUrl>
     <AlternateText>Do you konw how to care for your cat?</AlternateText>
     <Impressions>100</Impressions>
-    <Keyword>Academy</Keyword>
+    <Caption>Your pet, your vet.</Caption>
+    <Keyword>careCat</Keyword>
   </Ad>
   <Ad>
-    <ImageUrl>Resources/img/adoptCat.jpg</ImageUrl>
+    <ImageUrl>Resources/img/adoptCat.png</ImageUrl>
     <Height>215</Height>
     <Width>608</Width>
     <NavigateUrl>http://www.vetstreet.com/cats/</NavigateUrl>
     <AlternateText>Do you want to adopt a lovely cat?</AlternateText>
-    <Impressions>50</Impressions>
-    <Keyword>Academy</Keyword>
+    <Impressions>80</Impressions>
+    <Caption>Your pet, our passion.</Caption>
+    <Keyword>adoptCat</Keyword>
   </Ad>
 </Advertisements>
