@@ -7,14 +7,20 @@
         <li><a href="/">Home</a></li>
         <li class="active">About us</li>
     </ol>
-    <h3>About us, GlassCat</h3>
-    <p style="font-size:20px">There are so many people who want to raise cats but in fail.
-         We are just one of them, so we come up with the idea to create this website for cat lovers to pour out their affections
-         for cats no matter whether they own one or not.
-         <br />
-         Cats are like glasses, so soft that it can be of any shape.
-         <br />
-         Cats are like glasses, so fragile that it deserves our special care.
+    <h2>About us, GlassCat</h2>
+    <p>Some people want to raise cats but in fail.
+        <br />
+        Some others want to show off their cats but find no place.
+        <br />
+        Both of them have deep affections for cats, and both you and I belong to them.
+        <br />
+        This is just the very reason why we meet here.
+        <br />
+        This is just the very palce where we can pour out all the passions.
+        <br />
+        Nice to meet you here.
+        <br />
+        Hope you have a good time.
     </p>
  
 </asp:Content>

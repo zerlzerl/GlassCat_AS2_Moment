@@ -18,6 +18,12 @@
 
     <title><%: Page.Title %> - GlassCat</title>
     <%--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+    <style type="text/css">
+        p {
+            font-size: 20px;
+        }
+    </style>
+
 </head>
 <body>
     <form runat="server">

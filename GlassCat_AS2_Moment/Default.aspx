@@ -8,7 +8,9 @@
 
         <div style="text-align: center; margin-bottom: 40px;">
             <h2>GlassCat</h2>
-            <h3 style="color: coral">Cats are like glasses deserving special care.</h3>
+            <h3 style="color:coral">
+                Cats are like glass, deserving special care.
+            </h3>
         </div>
         <p>
             This website is designed for those who love cats no matter whether they own one or not. 

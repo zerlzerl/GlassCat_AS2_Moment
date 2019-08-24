@@ -8,7 +8,15 @@
         <li><a href="/Pages/About.aspx">About us</a></li>
         <li class="active">Our history</li>
     </ol>
-    History
-  
+    <h2>The history of us, GlassCat</h2>
+    <p>
+        Our company, GlassCat, is found on 19th, Aug, 2019.
+        <br />
+        There are merely one employer and one employee at first.
+        <br />
+        However, our team are much more ambitious, and our strength are more powerful now,
+        <br />
+        just because of your trust and joining us. 
+    </p>
     
 </asp:Content>
