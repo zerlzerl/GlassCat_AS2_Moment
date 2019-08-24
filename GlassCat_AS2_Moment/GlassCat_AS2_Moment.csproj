@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdFile1.xml" />
     <Content Include="App_Data\GlassCat_AS2_Moment.accdb" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -90,6 +91,23 @@
     <Content Include="Resources\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
     <Content Include="Resources\bootstrap-3.3.7-dist\js\npm.js" />
     <Content Include="Resources\css\site.css" />
+    <Content Include="Resources\font-awesome\css\font-awesome.css" />
+    <Content Include="Resources\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\img\1c.jpg" />
+    <Content Include="Resources\img\1d.jpg" />
+    <Content Include="Resources\img\2c.jpg" />
+    <Content Include="Resources\img\2d.jpg" />
+    <Content Include="Resources\img\3c.jpg" />
+    <Content Include="Resources\img\3d.jpg" />
+    <Content Include="Resources\img\4c.jpg" />
+    <Content Include="Resources\img\4d.jpg" />
+    <Content Include="Resources\img\5c.png" />
+    <Content Include="Resources\img\5d.png" />
+    <Content Include="Resources\img\666.jpg" />
+    <Content Include="Resources\img\adoptCat.png" />
+    <Content Include="Resources\img\careCat.png" />
+    <Content Include="Resources\img\feedCat.png" />
     <Content Include="Resources\img\photo2.png" />
     <Content Include="Resources\img\user1-128x128.jpg" />
     <Content Include="Resources\jquery-1.12.4\jquery.js" />
@@ -190,6 +208,12 @@
     <Content Include="Resources\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Resources\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Resources\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Resources\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resources\font-awesome\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

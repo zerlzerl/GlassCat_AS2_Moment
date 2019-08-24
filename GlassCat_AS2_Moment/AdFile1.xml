@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Resources/img/feedCat.png</ImageUrl>
+    <Height>215</Height>
+    <Width>608</Width>
+    <NavigateUrl>https://www.petflow.com/cat/food</NavigateUrl>
+    <AlternateText>Do you konw how to feed your cat correctly?</AlternateText>
+    <Impressions>100</Impressions>
+    <Caption>Find something wonderful for your cat in PetFlow!</Caption>
+    <Keyword>feedCat</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>Resources/img/careCat.png</ImageUrl>
+    <Height>215</Height>
+    <Width>608</Width>
+    <NavigateUrl>https://www.purina.com/cats/cat-breeds</NavigateUrl>
+    <AlternateText>Do you konw how to care for your cat?</AlternateText>
+    <Impressions>100</Impressions>
+    <Caption>Your pet, your vet.</Caption>
+    <Keyword>careCat</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>Resources/img/adoptCat.png</ImageUrl>
+    <Height>215</Height>
+    <Width>608</Width>
+    <NavigateUrl>http://www.vetstreet.com/cats/</NavigateUrl>
+    <AlternateText>Do you want to adopt a lovely cat?</AlternateText>
+    <Impressions>80</Impressions>
+    <Caption>Your pet, our passion.</Caption>
+    <Keyword>adoptCat</Keyword>
+  </Ad>
+</Advertisements>
