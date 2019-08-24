@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,94 @@ namespace GlassCat_AS2_Moment.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             
+        }
+
+        protected void registerUsernameValidate(object source, ServerValidateEventArgs args)
+        {
+            string username = registerUsername.Text;
+            if (string.IsNullOrEmpty(username))
+            {
+                return;
+            }
+            // set select sql
+            RegisterSqlDataSource.SelectCommand = "SELECT COUNT(*) from [user] WHERE [username]=@username";
+
+            // set select parameter
+            RegisterSqlDataSource.SelectParameters.Clear();
+            RegisterSqlDataSource.SelectParameters.Add("@username", username);
+
+            // execute select command
+            int count = (int)((DataView)RegisterSqlDataSource.Select(DataSourceSelectArguments.Empty))[0][0];
+            if (count == 0)
+            {
+                // no same username
+                args.IsValid = true;
+            } else
+            {
+                args.IsValid = false;
+                registerUsernameDuplicateValidator.ErrorMessage = "This username has already been registered, try another";
+            }
+        }
+
+        protected void uploadPortrialBtn_Click(object sender, EventArgs e)
+        {
+            string serverSavePath = "~/user/protrial/";
+            if (registerUserIconUpload.HasFile)
+            {
+                string userProtrialPath = Server.MapPath(serverSavePath);
+                if (!System.IO.Directory.Exists(userProtrialPath)) 
+                {
+                    // create upload file path
+                    System.IO.Directory.CreateDirectory(userProtrialPath);
+                }
+                // rename upload file
+                int i = registerUserIconUpload.FileName.LastIndexOf("."); // get the file extened name
+                string exten = registerUserIconUpload.FileName.Substring(i);
+                string newFileName = Guid.NewGuid().ToString() + exten; // new file name
+                string savePath = userProtrialPath + newFileName; // absolute save path
+                string virtualSavePath = serverSavePath + newFileName; // virtual http required path
+
+                // save to server
+                registerUserIconUpload.SaveAs(savePath);
+
+                // show on the page
+                registerPortialPreview.ImageUrl = virtualSavePath;
+                registerPortialPreview.Visible = true;
+
+                // hide upload btn
+                uploadPortrialBtn.Visible = false;
+
+            }
+        }
+
+        protected void registerBtn_Click(object sender, EventArgs e)
+        {
+            // get register data from page forms
+            string username = registerUsername.Text;
+            string password = registerPassword.Text;
+            string email = registerEmail.Text;
+            string gender = genderRadioButtonList.SelectedValue;
+            string profession = professionDropDownList.SelectedValue;
+            int age = Convert.ToInt32(registerAge.Text);
+
+            List<string> favoriteCatBreeds = new List<string>();
+            foreach (ListItem item in registerFavoriteCatBreeds.Items)
+            {
+                if (item.Selected)
+                {
+                    // item ...
+                    favoriteCatBreeds.Add(item.Value);
+                }
+            }
+            string favoriteCatBreedsStr = string.Join(",", favoriteCatBreeds.ToArray());
+            string motto = registerMotto.Text;
+            bool ownCats = ownCatCheckbox.Checked;
+            string userProtrialUrl = registerPortialPreview.ImageUrl;
+
+            // set insert sql
+            RegisterSqlDataSource.InsertCommand =
+                "INSERT INTO [user] ([username],[password],[gender],[profession],[interests],[own_cats]," +
+                "[email],[usericon],[motto],[age]) VALUES ()";
         }
     }
 }

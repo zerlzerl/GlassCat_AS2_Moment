@@ -26,7 +26,6 @@ namespace GlassCat_AS2_Moment.Pages
             // after customer validation, user is validated, username can be used in form authentication
             string username = loginUsername.Text;
             FormsAuthentication.SetAuthCookie(username, true);
-            bool isloged = this.Page.User.Identity.IsAuthenticated;
             string retrnUrl = Request.QueryString["returnUrl"];
             if (!string.IsNullOrEmpty(retrnUrl))
             {

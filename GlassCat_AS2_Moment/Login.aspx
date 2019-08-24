@@ -23,7 +23,7 @@
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         <!-- username required validator -->
                         <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="loginUsername"
-                            ErrorMessage="Error: Username cannot be empty" />
+                            Display="Dynamic" ErrorMessage="Error: Username cannot be empty" />
                     </div>
                     <!-- password field -->
                     <div class="form-group has-feedback">
@@ -31,7 +31,7 @@
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         <!-- password required validator -->
                         <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="loginPassword"
-                            ErrorMessage="Error: Password cannot be empty" />
+                            Display="Dynamic" ErrorMessage="Error: Password cannot be empty" />
                     </div>
                     <hr />
                     <div class="row">
@@ -52,7 +52,8 @@
                     <div class="row">
                         <div class="col-xs-12">
 
-                            <asp:CustomValidator ID="LoginValidator" runat="server" OnServerValidate="LoginValidator_ServerValidate" CssClass="label label-danger"></asp:CustomValidator>
+                            <asp:CustomValidator ID="LoginValidator" runat="server" OnServerValidate="LoginValidator_ServerValidate" Display="Dynamic" 
+                                CssClass="label label-danger"></asp:CustomValidator>
                         </div>
                     </div>
 
