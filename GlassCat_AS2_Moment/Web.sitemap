@@ -1,0 +1,22 @@
+﻿<Book Title="GlassCat">
+    <Chapter Heading="Home">
+    </Chapter>
+  <Chapter Heading="Register">
+  </Chapter>
+  <Chapter Heading="About us">
+    <Section Heading="Our history">
+    </Section>
+    <Section Heading="FAQ">
+    </Section>
+  </Chapter>
+  <Chapter Heading="Site map">
+  </Chapter>
+  <Chapter Heading="Documentaion">
+  </Chapter>
+  <Chapter Heading="Email">
+  </Chapter>
+  <Chapter Heading="Calendar">
+  </Chapter>
+  <Chapter Heading="Login">
+  </Chapter>
+</Book>
