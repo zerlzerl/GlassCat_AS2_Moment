@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <asp:SqlDataSource ID="DefaultSqlDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
     <div class="jumbotron">
 
 
@@ -27,17 +28,20 @@
                 <div class="box box-widget widget-user">
                     <!-- Add the bg color to the header using any of the bg-* classes -->
                     <div class="widget-user-header bg-aqua-active">
-                        <h3 class="widget-user-username">Alexander Pierce</h3>
-                        <h5 class="widget-user-desc">Founder &amp; CEO</h5>
+                        <h3 class="widget-user-username">
+                            <asp:Label ID="defaultUsername" runat="server" Text="Label"></asp:Label>
+                        </h3>
+                        <h5 class="widget-user-desc"><asp:Label ID="defaultUserProfession" runat="server" Text="Label"></asp:Label></h5>
                     </div>
                     <div class="widget-user-image">
-                        <img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Avatar">
+                        <asp:Image CssClass="img-circle" ID="defaultUserPortrait" runat="server" />
+                        <%--<img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Avatar">--%>
                     </div>
                     <div class="box-footer">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="description-block">
-                                    <span class="description-text">I like cats.</span>
+                                    <span class="description-text"><asp:Label ID="defaultUserMotto" runat="server" Text="Label"></asp:Label></span>
                                 </div>
                             </div>
 
