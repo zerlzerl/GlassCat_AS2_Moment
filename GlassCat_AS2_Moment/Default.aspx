@@ -12,6 +12,8 @@
                 Cats are like glass, deserving special care.
             </h3>
         </div>
+        
+
         <p>
             This website is designed for those who love cats no matter whether they own one or not. 
             They can share with other users their thoughts as well as photos of lovely cats here.
@@ -33,7 +35,13 @@
                     </div>
                     <div class="box-footer">
                         <div class="row">
-                            <div class="col-sm-4 border-right">
+                            <div class="col-sm-12">
+                                <div class="description-block">
+                                    <span class="description-text">I like cats.</span>
+                                </div>
+                            </div>
+
+                            <%--<div class="col-sm-4 border-right">
                                 <div class="description-block">
                                     <h5 class="description-header">12</h5>
                                     <span class="description-text">CATS</span>
@@ -56,7 +64,9 @@
                                 </div>
                                 <!-- /.description-block -->
                             </div>
-                            <!-- /.col -->
+                            <!-- /.col -->--%>
+
+
                         </div>
                         <!-- /.row -->
                     </div>
@@ -142,20 +152,23 @@
         </div>
         <!-- /.row -->
 
-        <div style="text-align: center;">
-            <asp:ScriptManager ID="ScriptManager1" runat="server" />
-            <asp:Timer ID="Timer1" Interval="2000" runat="server" />
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <Triggers>
-                    <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
-                </Triggers>
-                <ContentTemplate>
-                    <asp:AdRotator ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </div>
+        
     </div>
     
+    <div style="text-align: center; margin-bottom:20px">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <asp:Timer ID="Timer1" Interval="2000" runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+            </Triggers>
+            <ContentTemplate>
+                <asp:AdRotator ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+
+
     <div class="row">
         <div class="col-md-3 col-md-offset-3">
             QUICK LINK

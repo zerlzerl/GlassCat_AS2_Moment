@@ -27,7 +27,7 @@
 
 </head>
 <body>
-
+    
     <form runat="server">
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
             <div class="container">
@@ -39,7 +39,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">GlassCat</a>
+                    <a class="navbar-brand" href="/"><asp:Label ID="Label1" Text="GlassCat" runat="server" ToolTip="Back to home"/></a>
+                  
+                   
+                    
                 </div>
 
                 <%-- Collect the nav links, forms, and other content for toggling --%>
@@ -47,7 +50,7 @@
 
                     
 
-                    <ul class="nav navbar-nav">
+                    <%--<ul class="nav navbar-nav">
                         <li class="<%: Page.Title == "Register" ? "active":"" %>"><a href="/Register.aspx">Register</a></li>
                         <li class="dropdown <%: (Page.Title == "About us" || Page.Title == "History" || Page.Title == "FAQ") ? "active":"" %>">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us<span class="caret"></span></a>
@@ -62,7 +65,28 @@
                         <li class="<%: Page.Title == "Email" ? "active":"" %>"><a href="/Pages/Email.aspx">Email</a></li>
                         <li class="<%: Page.Title == "Calendar" ? "active":"" %>"><a href="/Pages/Calendar.aspx">Calendar</a></li>
 
+                    </ul>--%>
+
+
+                    <%--with tooltip--%>
+                    <ul class="nav navbar-nav">
+                        <li class="<%: Page.Title == "Register" ? "active":"" %>"><a href="/Register.aspx"><asp:Label ID="Label7" Text="Register" runat="server" ToolTip="Go to Register"/></a></li>
+                        <li class="dropdown <%: (Page.Title == "About us" || Page.Title == "History" || Page.Title == "FAQ") ? "active":"" %>">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><asp:Label ID="Label2" Text="About us" runat="server" ToolTip="Go to About us"/><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="<%: Page.Title == "About us" ? "active":"" %>"><a href="/Pages/About.aspx">About us</a></li>
+                                <li class="<%: Page.Title == "History" ? "active":"" %>"><a href="/Pages/History.aspx">Our history</a></li>
+                                <li class="<%: Page.Title == "FAQ" ? "active":"" %>"><a href="/Pages/FAQ.aspx">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="<%: Page.Title == "Site map" ? "active":"" %>"><a href="/Pages/SiteMap.aspx"><asp:Label ID="Label3" Text="Site map" runat="server" ToolTip="Go to Site map"/></a></li>
+                        <li class="<%: Page.Title == "Documentation" ? "active":"" %>"><a href="/Pages/Documentation.aspx"><asp:Label ID="Label4" Text="Documentation" runat="server" ToolTip="Go to Documentation"/></a></li>
+                        <li class="<%: Page.Title == "Email" ? "active":"" %>"><a href="/Pages/Email.aspx"><asp:Label ID="Label5" Text="Email" runat="server" ToolTip="Go to Email"/></a></li>
+                        <li class="<%: Page.Title == "Calendar" ? "active":"" %>"><a href="/Pages/Calendar.aspx"><asp:Label ID="Label6" Text="Calendar" runat="server" ToolTip="Go to Calendar"/></a></li>
+
                     </ul>
+
+
 
                     <ul class="nav navbar-nav navbar-right" style="margin-right: 5px;">
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -109,8 +133,10 @@
             <footer style="text-align: center; color: #808080">
                 <p>&copy; <%: DateTime.Now.Year %> - Monny & Micheal</p>
             </footer>
+
         </div>
 
+        
 
         <script type="text/javascript" src="/Resources/jquery-1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="/Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
