@@ -44,6 +44,10 @@ namespace GlassCat_AS2_Moment.Pages
 
         protected void uploadPortrialBtn_Click(object sender, EventArgs e)
         {
+            // retain password after submit protrial
+            string password = registerPassword.Text;
+            string passwordConfrim = registerPasswordConfirmation.Text;
+
             string serverSavePath = "~/user/protrial/";
             if (registerUserIconUpload.HasFile)
             {
@@ -70,37 +74,61 @@ namespace GlassCat_AS2_Moment.Pages
                 // hide upload btn
                 uploadPortrialBtn.Visible = false;
 
+                // retain password after submit protrial
+                registerPassword.Attributes.Add("value", password);
+                registerPasswordConfirmation.Attributes.Add("value", passwordConfrim);
             }
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)
         {
-            // get register data from page forms
-            string username = registerUsername.Text;
-            string password = registerPassword.Text;
-            string email = registerEmail.Text;
-            string gender = genderRadioButtonList.SelectedValue;
-            string profession = professionDropDownList.SelectedValue;
-            int age = Convert.ToInt32(registerAge.Text);
-
-            List<string> favoriteCatBreeds = new List<string>();
-            foreach (ListItem item in registerFavoriteCatBreeds.Items)
+            if (Page.IsValid)
             {
-                if (item.Selected)
-                {
-                    // item ...
-                    favoriteCatBreeds.Add(item.Value);
-                }
-            }
-            string favoriteCatBreedsStr = string.Join(",", favoriteCatBreeds.ToArray());
-            string motto = registerMotto.Text;
-            bool ownCats = ownCatCheckbox.Checked;
-            string userProtrialUrl = registerPortialPreview.ImageUrl;
+                // get register data from page forms
+                string username = registerUsername.Text;
+                string password = registerPassword.Text;
+                string email = registerEmail.Text;
+                string gender = genderRadioButtonList.SelectedValue;
+                string profession = professionDropDownList.SelectedValue;
+                string age = registerAge.Text;
 
-            // set insert sql
-            RegisterSqlDataSource.InsertCommand =
-                "INSERT INTO [user] ([username],[password],[gender],[profession],[interests],[own_cats]," +
-                "[email],[usericon],[motto],[age]) VALUES ()";
+                List<string> favoriteCatBreeds = new List<string>();
+                foreach (ListItem item in registerFavoriteCatBreeds.Items)
+                {
+                    if (item.Selected)
+                    {
+                        // item ...
+                        favoriteCatBreeds.Add(item.Value);
+                    }
+                }
+                string favoriteCatBreedsStr = string.Join(",", favoriteCatBreeds.ToArray());
+                string motto = registerMotto.Text;
+                bool ownCats = ownCatCheckbox.Checked;
+                string userProtrialUrl = registerPortialPreview.ImageUrl;
+
+                // set insert sql
+                RegisterSqlDataSource.InsertCommand =
+                    "INSERT INTO [user] " +
+                    "([username], [password], [gender], [profession], [interests], [own_cats], [email], [usericon], [motto], [age]) " +
+                    "VALUES " +
+                    "([@username], [@password], [@gender], [@profession], [@interests], [@own_cats], [@email], [@usericon], [@motto], [@age])";
+
+                RegisterSqlDataSource.InsertParameters.Clear();
+                RegisterSqlDataSource.InsertParameters.Add("@username", username);
+                RegisterSqlDataSource.InsertParameters.Add("@password", password);
+                RegisterSqlDataSource.InsertParameters.Add("@gender", gender);
+                RegisterSqlDataSource.InsertParameters.Add("@profession", profession);
+                RegisterSqlDataSource.InsertParameters.Add("@interests", favoriteCatBreedsStr);
+                RegisterSqlDataSource.InsertParameters.Add("@own_cats", DbType.Boolean, ownCats ? "true" : "false");
+                RegisterSqlDataSource.InsertParameters.Add("@email", email);
+                RegisterSqlDataSource.InsertParameters.Add("@usericon", userProtrialUrl);
+                RegisterSqlDataSource.InsertParameters.Add("@motto", motto);
+                RegisterSqlDataSource.InsertParameters.Add("@age", DbType.Int32, age);
+
+                RegisterSqlDataSource.Insert();
+
+                Response.Redirect("/Login.aspx");
+            }
         }
     }
 }

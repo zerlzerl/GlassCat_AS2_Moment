@@ -160,7 +160,7 @@
                     </div>
 
                     <div class="form-group has-feedback">
-                        <asp:Image ID="registerPortialPreview" runat="server" AlternateText="user image" ImageUrl="~/Resources/img/user1-128x128.jpg" CssClass="img-rounded" Visible="false" />
+                        <asp:Image ID="registerPortialPreview" runat="server" AlternateText="user image" ImageUrl="~/Resources/img/user1-128x128.jpg" CssClass="img-rounded img-responsive" Visible="false" />
                     </div>
 
                     <div class="row">
