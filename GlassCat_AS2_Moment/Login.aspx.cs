@@ -21,7 +21,7 @@ namespace GlassCat_AS2_Moment.Pages
             //}
         }
 
-        protected void ValidateUser(object sender, EventArgs e)
+        protected void login(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {

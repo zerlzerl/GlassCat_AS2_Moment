@@ -130,20 +130,22 @@
                         <label for="registerMotto">Your motto: &nbsp;</label>
                         <asp:TextBox ID="registerMotto" runat="server" CssClass="form-control" placeholder="Your motto" />
                         <span class="glyphicon glyphicon-heart form-control-feedback"></span>
+                        <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="registerMotto"
+                            Display="Dynamic" ErrorMessage="Error: Motto cannot be empty" />
                     </div>
 
                     <div class="form-group has-feedback">
+                        <label for="ownCatCheckbox">Do you have a cat? &nbsp;</label>
                         <div class="checkbox icheck" style="margin-left: 20px;">
                             <label>
                                 <asp:CheckBox ID="ownCatCheckbox" runat="server" />
                                 <label for="ownCatCheckbox">I do have a cat. &nbsp;</label>
-
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group has-feedback">
-                        <label for="registerUserIconUpload">Click here to upload your portrial: &nbsp;</label>
+                        <label for="registerUserIconUpload">Your portrial: &nbsp;</label>
                         <div class="row">
                             <div class="col-xs-12">
                                 <asp:FileUpload ID="registerUserIconUpload" runat="server" onchange="showUploadBtn()"/>
@@ -160,7 +162,7 @@
                     </div>
 
                     <div class="form-group has-feedback">
-                        <asp:Image ID="registerPortialPreview" runat="server" AlternateText="user image" ImageUrl="~/Resources/img/user1-128x128.jpg" CssClass="img-rounded img-responsive" Visible="false" />
+                        <asp:Image ID="registerPortialPreview" runat="server" AlternateText="user image" CssClass="img-rounded img-responsive" Visible="false" />
                     </div>
 
                     <div class="row">
