@@ -45,13 +45,12 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-xs-4">
-                            <asp:Button ID="loginBtn" Text="Sign In" runat="server" OnClick="ValidateUser" Class="btn btn-primary btn-block btn-flat" />
+                            <asp:Button ID="loginBtn" Text="Sign In" runat="server" OnClick="login" Class="btn btn-primary btn-block btn-flat" />
                         </div>
                         <!-- /.col -->
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-
                             <asp:CustomValidator ID="LoginValidator" runat="server" OnServerValidate="LoginValidator_ServerValidate" Display="Dynamic" 
                                 CssClass="label label-danger"></asp:CustomValidator>
                         </div>

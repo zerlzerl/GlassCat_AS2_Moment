@@ -73,6 +73,8 @@ namespace GlassCat_AS2_Moment.Pages
 
                 // hide upload btn
                 uploadPortrialBtn.Visible = false;
+                registerUserIconUpload.Visible = false;
+
 
                 // retain password after submit protrial
                 registerPassword.Attributes.Add("value", password);
