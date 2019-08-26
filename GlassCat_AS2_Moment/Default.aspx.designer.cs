@@ -67,49 +67,13 @@ namespace GlassCat_AS2_Moment {
         protected global::System.Web.UI.WebControls.Label defaultUserMotto;
         
         /// <summary>
-        /// defaultMomentUsericon control.
+        /// defaultMomentRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image defaultMomentUsericon;
-        
-        /// <summary>
-        /// defaultMomentUsername control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label defaultMomentUsername;
-        
-        /// <summary>
-        /// defaultMomentDatetime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label defaultMomentDatetime;
-        
-        /// <summary>
-        /// defaultMomentPhoto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image defaultMomentPhoto;
-        
-        /// <summary>
-        /// defaultMomentMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label defaultMomentMessage;
+        protected global::System.Web.UI.WebControls.Repeater defaultMomentRepeater;
         
         /// <summary>
         /// ScriptManager1 control.

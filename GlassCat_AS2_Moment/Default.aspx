@@ -85,41 +85,46 @@
                     <div class="col-md-12">
 
 
-                        <!-- to be iterated -->
-                        <!-- Box Comment -->
-                        <div class="box box-widget">
-                            <div class="box-header with-border">
-                                <div class="user-block">
-                                    <%--<img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Image">--%>
-                                    <asp:Image ID="defaultMomentUsericon" CssClass="img-circle" runat="server" />
-                                    <span class="username"><a href="#">
-                                        <asp:Label ID="defaultMomentUsername" runat="server" Text="Label"></asp:Label>
-                                    </a></span>
-                                    <span class="description">
-                                        <asp:Label ID="defaultMomentDatetime" runat="server" Text="Label"></asp:Label>
-                                    </span>
+                        <asp:Repeater ID="defaultMomentRepeater" runat="server">
+                            <ItemTemplate>
+                                <!-- to be iterated -->
+                                <!-- Box Comment -->
+                                <div class="box box-widget">
+                                    <div class="box-header with-border">
+                                        <div class="user-block">
+                                            <%--<img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Image">--%>
+                                            <asp:Image ID="defaultMomentUsericon" CssClass="img-circle" runat="server" ImageUrl="<%#((MomentObject)Container.DataItem).usericonUrl%>"/>
+                                            <span class="username"><a href="#">
+                                                <asp:Label ID="defaultMomentUsername" runat="server" Text="<%#((MomentObject)Container.DataItem).username%>"></asp:Label>
+                                            </a></span>
+                                            <span class="description">
+                                                <asp:Label ID="defaultMomentDatetime" runat="server" Text="<%#((MomentObject)Container.DataItem).postTime%>"></asp:Label>
+                                            </span>
+                                        </div>
+                                        <!-- /.user-block -->
+                                        <div class="box-tools" style="position: absolute; right: 10px; top: 5px;">
+                                            <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Like">
+                                                <i class="fa fa-heart-o"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <!-- /.box-tools -->
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <%--<img class="img-responsive pad" src="/Resources/img/photo2.png" alt="Photo">--%>
+                                        <asp:Image ID="defaultMomentPhoto" CssClass="img-responsive pad" runat="server" ImageUrl="<%#((MomentObject)Container.DataItem).photoUrl%>" />
+                                        <p><asp:Label style="margin-left:10px;" ID="defaultMomentMessage" runat="server" Text="<%#((MomentObject)Container.DataItem).message%>"></asp:Label></p>
+                                    </div>
+                                    <!-- /.box-body -->
                                 </div>
-                                <!-- /.user-block -->
-                                <div class="box-tools" style="position: absolute; right: 10px; top: 5px;">
-                                    <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Like">
-                                        <i class="fa fa-heart-o"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                </div>
-                                <!-- /.box-tools -->
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <%--<img class="img-responsive pad" src="/Resources/img/photo2.png" alt="Photo">--%>
-                                <asp:Image ID="defaultMomentPhoto" CssClass="img-responsive pad" runat="server" />
-                                <p><asp:Label style="margin-left:10px;" ID="defaultMomentMessage" runat="server" Text="Label"></asp:Label></p>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
+                                <!-- /.box -->
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        
 
                     </div>
                 </div>
