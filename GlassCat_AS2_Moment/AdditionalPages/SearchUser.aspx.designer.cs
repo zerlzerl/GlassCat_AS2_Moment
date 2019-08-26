@@ -22,6 +22,15 @@ namespace GlassCat_AS2_Moment.AdditionalPages {
         protected global::System.Web.UI.WebControls.TextBox userIdInput;
         
         /// <summary>
+        /// SearchIDBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SearchIDBtn;
+        
+        /// <summary>
         /// usernameInput control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace GlassCat_AS2_Moment.AdditionalPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox usernameInput;
+        
+        /// <summary>
+        /// searchUsernameBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button searchUsernameBtn;
         
         /// <summary>
         /// emailInput control.
@@ -40,12 +58,30 @@ namespace GlassCat_AS2_Moment.AdditionalPages {
         protected global::System.Web.UI.WebControls.TextBox emailInput;
         
         /// <summary>
-        /// searchUsers control.
+        /// searchEmailBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchUsers;
+        protected global::System.Web.UI.WebControls.Button searchEmailBtn;
+        
+        /// <summary>
+        /// searchUserDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource searchUserDataSource;
+        
+        /// <summary>
+        /// searchUserListView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView searchUserListView;
     }
 }

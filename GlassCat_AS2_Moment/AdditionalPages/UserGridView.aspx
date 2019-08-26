@@ -44,10 +44,10 @@
     </div>
     <div class="row">
         <div class="col-md-2 col-md-offset-8">
-            <a target="_blank" class="btn btn-primary hideAdditionalBtn" href="/AdditionalPages/DisplayRecordsCode.aspx">Display Record</a>
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" href="/AdditionalPages/DisplayRecordsCode.aspx">Display Record</a>
         </div>
         <div class="col-md-2">
-            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/SearchUser.aspx">Search User</a>
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" href="/AdditionalPages/SearchUser.aspx">Search User</a>
         </div>
     </div>
 </asp:Content>

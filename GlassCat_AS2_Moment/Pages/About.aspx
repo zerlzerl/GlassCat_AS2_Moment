@@ -27,4 +27,10 @@
         Hope you have a good time.
     </p>
  
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Pages/About.aspx;~/Pages/About.aspx.cs">About us</a>
+        </div>
+    </div>
 </asp:Content>

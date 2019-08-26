@@ -64,4 +64,10 @@
             <!-- /.login-box -->
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Login.aspx;~/Login.aspx.cs;~/Web.config;~/Pages/Web.config">Login</a>
+        </div>        
+    </div>
 </asp:Content>

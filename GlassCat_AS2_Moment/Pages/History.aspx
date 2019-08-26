@@ -22,5 +22,10 @@
         <br />
         just because of your trust and joining us. 
     </p>
-    
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Pages/History.aspx;~/Pages/History.aspx.cs">History</a>
+        </div>
+    </div>
 </asp:Content>

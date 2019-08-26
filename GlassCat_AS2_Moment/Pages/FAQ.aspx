@@ -39,6 +39,11 @@
         <br />
         You can keep looking forward to it.
     </p>
-    
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Pages/FAQ.aspx;~/Pages/FAQ.aspx.cs">FAQ</a>
+        </div>
+    </div>
     
 </asp:Content>

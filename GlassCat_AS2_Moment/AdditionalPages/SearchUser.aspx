@@ -3,42 +3,98 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <div class="row">
-        <div class="col-xs-4 form-group">
-            <label for="userIdInput">User ID: &nbsp;</label>
+        <div class="col-xs-2 form-group">
+            <label for="userIdInput" class="control-label h4">User ID: &nbsp;</label>
+        </div>
+        <div class="col-xs-3 form-group">
             <asp:TextBox ID="userIdInput" runat="server" CssClass="form-control" placeholder="User ID" />
         </div>
-        <div class="col-xs-4 form-group">
-            <label for="usernameInput">Username: &nbsp;</label>
+        <div class="col-xs-3 form-group">            
+            <asp:Button ID="SearchIDBtn" runat="server" Text="Search via ID" CssClass="btn btn-primary btn-block btn-flat" OnClick="searchUsers_Click"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2 form-group">
+            <label for="usernameInput" class="control-label h4">Username: &nbsp;</label>
+        </div>
+        <div class="col-xs-3 form-group">
             <asp:TextBox ID="usernameInput" runat="server" CssClass="form-control" placeholder="Username" />
         </div>
-        <div class="col-xs-4 form-group">
-            <label for="emailInput">Email: &nbsp;</label>
+        <div class="col-xs-3 form-group">            
+            <asp:Button ID="searchUsernameBtn" runat="server" Text="Search via username" CssClass="btn btn-primary btn-block btn-flat" OnClick="searchUsers_Click"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2 form-group">
+            <label for="emailInput" class="control-label h4">Email: &nbsp;</label>
+        </div>
+        <div class="col-xs-3 form-group">
             <asp:TextBox ID="emailInput" runat="server" CssClass="form-control" placeholder="Email" />
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4 form-group">            
-            <asp:Button ID="searchUsers" runat="server" Text="Search" CssClass="btn btn-primary btn-block btn-flat" OnClick="searchUsers_Click"/>
+        <div class="col-xs-3 form-group">            
+            <asp:Button ID="searchEmailBtn" runat="server" Text="Search via email" CssClass="btn btn-primary btn-block btn-flat" OnClick="searchUsers_Click"/>
         </div>
     </div>
+    <asp:SqlDataSource runat="server" ID="searchUserDataSource" ConnectionString='<%$ ConnectionStrings:ConnectionString4 %>' 
+        ProviderName='<%$ ConnectionStrings:ConnectionString4.ProviderName %>' SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
+    
+    
+    <asp:ListView ID="searchUserListView" runat="server">
+        <ItemTemplate>
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User ID: <%# Eval("ID") %></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-md-3">
+                                Username: <br /><b><%# Eval("username") %></b><br />
+                            </div>
+                            <div class="col-md-3">
+                                Email: <br /><b><%# Eval("email") %></b>
+                            </div>
+                            <div class="col-md-3">
+                                Password: <br /><b><%# Eval("password") %></b>
+                            </div>
+                            <div class="col-md-3">
+                                Gender: <br /><b><%# Eval("gender") %></b>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-md-3">
+                                Profession: <br /><b><%# Eval("profession") %></b>
+                            </div>                            
+                            <div class="col-md-3">
+                                Own a cat? <br /><b><%# ((Eval("own_cats").ToString() == "True") ? "Yes" : "No") %></b>
+                            </div>
+                            <div class="col-md-6">
+                                Favorite Cat Breeds: <br /><b><%# Eval("interests") %></b>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                User Portrial: <br /><img src="<%# Eval("usericon").ToString().Substring(1) %>" class="img-rounded img-responsive" />
+                            </div>
+                            <div class="col-md-3">
+                                Age: <br /><b><%# string.IsNullOrEmpty(Eval("age").ToString()) ? "Not set" : Eval("age") %></b>
+                            </div>
+                            <div class="col-md-6">
+                                Motto: <br /><b><%# Eval("motto") %></b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:ListView>
 
-
-    <%--<div class="row">
-        <asp:GridView ID="userSearchGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" CssClass="table table-bordered table-hover">
-            <Columns>
-                <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" InsertVisible="False" SortExpression="ID"></asp:BoundField>
-                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username"></asp:BoundField>
-                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password"></asp:BoundField>
-                <asp:BoundField DataField="gender" HeaderText="gender" SortExpression="gender"></asp:BoundField>
-                <asp:BoundField DataField="profession" HeaderText="profession" SortExpression="profession"></asp:BoundField>
-                <asp:BoundField DataField="interests" HeaderText="interests" SortExpression="interests"></asp:BoundField>
-                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email"></asp:BoundField>
-                <asp:ImageField DataImageUrlField="usericon" ControlStyle-CssClass="img-rounded img-responsive" HeaderText="usericon" SortExpression="usericon"></asp:ImageField>
-                <asp:BoundField DataField="motto" HeaderText="motto" SortExpression="motto"></asp:BoundField>
-                <asp:BoundField DataField="age" HeaderText="age" SortExpression="age"></asp:BoundField>
-                <asp:CheckBoxField DataField="own_cats" HeaderText="own_cats" SortExpression="own_cats"></asp:CheckBoxField>
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource runat="server" ID="searchUserDataSource" ConnectionString='<%$ ConnectionStrings:ConnectionString4 %>' ProviderName='<%$ ConnectionStrings:ConnectionString4.ProviderName %>' SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
-    </div>--%>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/AdditionalPages/SearchUser.aspx;~/AdditionalPages/SearchUser.aspx.cs">Search Records</a>
+        </div>        
+    </div>
 </asp:Content>
