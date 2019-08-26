@@ -15,7 +15,7 @@
                         <asp:BoundField DataField="profession" HeaderText="profession" SortExpression="profession"></asp:BoundField>
                         <asp:BoundField DataField="interests" HeaderText="interests" SortExpression="interests"></asp:BoundField>
                         <asp:BoundField DataField="email" HeaderText="email" SortExpression="email"></asp:BoundField>
-                        <%--<asp:ImageField DataImageUrlField="usericon" ControlStyle-CssClass="img-rounded img-responsive" HeaderText="usericon" SortExpression="usericon"></asp:ImageField>--%>
+                        <asp:ImageField DataImageUrlField="usericon" ControlStyle-CssClass="img-rounded img-responsive" HeaderText="usericon" SortExpression="usericon"></asp:ImageField>
                         <asp:BoundField DataField="motto" HeaderText="motto" SortExpression="motto"></asp:BoundField>
                         <asp:BoundField DataField="age" HeaderText="age" SortExpression="age"></asp:BoundField>
                         <asp:CheckBoxField DataField="own_cats" HeaderText="own_cats" SortExpression="own_cats"></asp:CheckBoxField>
@@ -47,7 +47,7 @@
             <a target="_blank" class="btn btn-primary hideAdditionalBtn" href="/AdditionalPages/DisplayRecordsCode.aspx">Display Record</a>
         </div>
         <div class="col-md-2">
-            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/UserGridView.aspx">Search User</a>
+            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/SearchUser.aspx">Search User</a>
         </div>
     </div>
 </asp:Content>

@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdditionalPages\Web.config" />
+    <Content Include="App_Data\FIT5192-A2-MarkingSheet.xlsx" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Resources\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />

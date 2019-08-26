@@ -13,5 +13,15 @@ namespace GlassCat_AS2_Moment.AdditionalPages
         {
 
         }
+
+        protected void searchUsers_Click(object sender, EventArgs e)
+        {
+            // handle search logic
+            string userId = userIdInput.Text;
+            string username = usernameInput.Text;
+            string userEmail = emailInput.Text;
+
+            // 
+        }
     }
 }

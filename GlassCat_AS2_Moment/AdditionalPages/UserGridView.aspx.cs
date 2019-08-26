@@ -64,22 +64,23 @@ namespace GlassCat_AS2_Moment.AdditionalPages
 
             detailHtml += "<tr>";
             detailHtml += "<td>Motto</td>";
-            detailHtml += "<td>" + clickedRow.Cells[7].Text + "</td>";
-            detailHtml += "</tr>";
-
-            detailHtml += "<tr>";
-            detailHtml += "<td>Age</td>";
             detailHtml += "<td>" + clickedRow.Cells[8].Text + "</td>";
             detailHtml += "</tr>";
 
             detailHtml += "<tr>";
+            detailHtml += "<td>Age</td>";
+            detailHtml += "<td>" + clickedRow.Cells[9].Text + "</td>";
+            detailHtml += "</tr>";
+
+            detailHtml += "<tr>";
             detailHtml += "<td>Have a Cat?</td>";
-            detailHtml += "<td>" + (((CheckBox)clickedRow.Cells[9].Controls[0]).Checked ? "Yes" : "No") + "</td>";
+            detailHtml += "<td>" + (((CheckBox)clickedRow.Cells[10].Controls[0]).Checked ? "Yes" : "No") + "</td>";
             detailHtml += "</tr>";
 
             detailHtml += "<tr>";
             detailHtml += "<td>User Portrial</td>";
-            detailHtml += "<td><img style='max-width: 150px;' class='img-rounded img-responsive' src='" + ((HyperLink)(clickedRow.Cells[10].Controls[0])).NavigateUrl.Substring(1) + "' /></td>";
+            string portrialUrl = ((HyperLink)(clickedRow.Cells[11].Controls[0])).NavigateUrl;
+            detailHtml += "<td><img style='max-width: 150px;' class='img-rounded img-responsive' src='" + (string.IsNullOrEmpty(portrialUrl) ? "" : portrialUrl.Substring(1)) + "' /></td>";
             detailHtml += "</tr>";
 
             detailHtml += "</table>";
