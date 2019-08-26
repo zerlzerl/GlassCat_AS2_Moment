@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdditionalPages\AddRecordsCode.aspx" />
+    <Content Include="AdditionalPages\DisplayCode.aspx" />
+    <Content Include="AdditionalPages\UserGridView.aspx" />
     <Content Include="AdFile1.xml" />
     <Content Include="App_Data\GlassCat_AS2_Moment.accdb" />
     <Content Include="Default.aspx" />
@@ -115,6 +118,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionalPages\AddRecordsCode.aspx.cs">
+      <DependentUpon>AddRecordsCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdditionalPages\AddRecordsCode.aspx.designer.cs">
+      <DependentUpon>AddRecordsCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalPages\DisplayCode.aspx.cs">
+      <DependentUpon>DisplayCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdditionalPages\DisplayCode.aspx.designer.cs">
+      <DependentUpon>DisplayCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalPages\UserGridView.aspx.cs">
+      <DependentUpon>UserGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdditionalPages\UserGridView.aspx.designer.cs">
+      <DependentUpon>UserGridView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,6 +222,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdditionalPages\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Resources\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />

@@ -2,3 +2,11 @@
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
+/*a.hideAdditionalBtn {
+    display: none !important;
+}*/
+
+pre, code {
+    white-space: pre-line;
+}

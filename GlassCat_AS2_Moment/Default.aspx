@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GlassCat_AS2_Moment.Default" %>
+﻿<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs"  Inherits="GlassCat_AS2_Moment.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <asp:Label ID="loginUserLabel" runat="server"></asp:Label>
     <div class="jumbotron">
-
 
         <div style="text-align: center; margin-bottom: 40px;">
             <h2>GlassCat</h2>

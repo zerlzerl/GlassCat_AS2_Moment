@@ -139,13 +139,13 @@ namespace GlassCat_AS2_Moment.Pages {
         protected global::System.Web.UI.WebControls.Button uploadPortrialBtn;
         
         /// <summary>
-        /// registerPortialPreview control.
+        /// registerPortraitPreview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image registerPortialPreview;
+        protected global::System.Web.UI.WebControls.Image registerPortraitPreview;
         
         /// <summary>
         /// registerBtn control.

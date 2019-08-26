@@ -68,8 +68,8 @@ namespace GlassCat_AS2_Moment.Pages
                 registerUserIconUpload.SaveAs(savePath);
 
                 // show on the page
-                registerPortialPreview.ImageUrl = virtualSavePath;
-                registerPortialPreview.Visible = true;
+                registerPortraitPreview.ImageUrl = virtualSavePath;
+                registerPortraitPreview.Visible = true;
 
                 // hide upload btn
                 uploadPortrialBtn.Visible = false;
@@ -106,7 +106,7 @@ namespace GlassCat_AS2_Moment.Pages
                 string favoriteCatBreedsStr = string.Join(",", favoriteCatBreeds.ToArray());
                 string motto = registerMotto.Text;
                 bool ownCats = ownCatCheckbox.Checked;
-                string userProtrialUrl = registerPortialPreview.ImageUrl;
+                string userProtrialUrl = registerPortraitPreview.ImageUrl;
 
                 // set insert sql
                 RegisterSqlDataSource.InsertCommand =

@@ -162,7 +162,7 @@
                     </div>
 
                     <div class="form-group has-feedback">
-                        <asp:Image ID="registerPortialPreview" runat="server" AlternateText="user image" CssClass="img-rounded img-responsive" Visible="false" />
+                        <asp:Image ID="registerPortraitPreview" runat="server" AlternateText="user image" CssClass="img-rounded img-responsive" Visible="false" />
                     </div>
 
                     <div class="row">
@@ -176,7 +176,15 @@
                 </div>
                 <!-- /.form-box -->
             </div>
-            <!-- /.register-box -->
+            <!-- /.register-box -->            
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-8">
+            <a target="_blank" class="btn btn-primary hideAdditionalBtn" href="/AdditionalPages/AddRecordsCode.aspx">Add Record</a>
+        </div>
+        <div class="col-md-2">
+            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/AddRecordsCode.aspx">Add Record</a>
         </div>
     </div>
     <script type="text/javascript">        
