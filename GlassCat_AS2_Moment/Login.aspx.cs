@@ -27,18 +27,9 @@ namespace GlassCat_AS2_Moment.Pages
             {
                 // after customer validation, user is validated, username can be used in form authentication
                 string username = loginUsername.Text;
-                FormsAuthentication.SetAuthCookie(username, true);
-                string retrnUrl = Request.QueryString["returnUrl"];
-                if (!string.IsNullOrEmpty(retrnUrl))
-                {
-                    //Redirect to Original requested page
-                    FormsAuthentication.RedirectFromLoginPage(username, rememberCheckbox.Checked);
-                }
-                else
-                {
-                    //If user directly opened login page, always show him Homepage.
-                    Response.Redirect("/");
-                }
+                // FormsAuthentication.SetAuthCookie(username, rememberCheckbox.Checked);
+                FormsAuthentication.RedirectFromLoginPage(username, rememberCheckbox.Checked);
+                
             }            
         }
 
