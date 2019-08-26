@@ -22,6 +22,15 @@ namespace GlassCat_AS2_Moment {
         protected global::System.Web.UI.WebControls.SqlDataSource DefaultSqlDataSource;
         
         /// <summary>
+        /// DefaultMomentSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource DefaultMomentSqlDataSource;
+        
+        /// <summary>
         /// defaultUsername control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace GlassCat_AS2_Moment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label defaultUserMotto;
+        
+        /// <summary>
+        /// defaultMomentRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater defaultMomentRepeater;
         
         /// <summary>
         /// ScriptManager1 control.
