@@ -23,6 +23,9 @@
         p {
             font-size: 20px;
         }
+        strong {
+            font-size:18px;
+        }
     </style>
 
 </head>

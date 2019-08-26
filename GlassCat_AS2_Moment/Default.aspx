@@ -165,7 +165,7 @@
         </div>
         <div class="col-md-3 col-md-offset-1">
             CONTACT US
-            <a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.html">
+            <a href="mailto:ysun0069@student.monash.edu">
                 <p>ysun0069@student.monash.edu</p>
             </a>
         </div>
