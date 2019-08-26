@@ -184,7 +184,7 @@
             <a target="_blank" class="btn btn-primary hideAdditionalBtn" href="/AdditionalPages/AddRecordsCode.aspx">Add Record</a>
         </div>
         <div class="col-md-2">
-            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/AddRecordsCode.aspx">Add Record</a>
+            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/UserGridView.aspx">Click here to see all the users</a>
         </div>
     </div>
     <script type="text/javascript">        

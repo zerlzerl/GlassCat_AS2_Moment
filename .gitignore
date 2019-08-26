@@ -11,8 +11,8 @@
 *.sln.docstates
 
 # ignore access db files
-*.accdb
-*.laccdb
+# *.accdb
+# *.laccdb
 # ignore user portrial files
 user/portrial/
 

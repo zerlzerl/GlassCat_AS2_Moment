@@ -10,15 +10,15 @@
 namespace GlassCat_AS2_Moment.AdditionalPages {
     
     
-    public partial class DisplayCode {
+    public partial class DisplayRecordsCode {
         
         /// <summary>
-        /// CodesReqeater control.
+        /// DisplayRecordsCodeList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CodesReqeater;
+        protected global::System.Web.UI.WebControls.DataList DisplayRecordsCodeList;
     }
 }
