@@ -170,4 +170,15 @@
             </a>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-8">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Default.aspx;~/AdFile1.xml">AdRotator</a>
+        </div>
+        <div class="col-md-2">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Site.Master;~/Site.Master.cs;~/Default.aspx">Master Page</a>
+        </div>
+    </div>
 </asp:Content>

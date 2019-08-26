@@ -16,12 +16,22 @@ namespace GlassCat_AS2_Moment.AdditionalPages
 
         protected void searchUsers_Click(object sender, EventArgs e)
         {
-            // handle search logic
-            string userId = userIdInput.Text;
-            string username = usernameInput.Text;
-            string userEmail = emailInput.Text;
+            Button btn = (Button)sender;
+            switch(btn.Text)
+            {
+                case "Search via ID":
+                    searchUserDataSource.SelectCommand = "SELECT * FROM [user] WHERE [ID] = " + userIdInput.Text.Trim(' ');
+                    break;
+                case "Search via username":
+                    searchUserDataSource.SelectCommand = "SELECT * FROM [user] WHERE [username] LIKE '%" + usernameInput.Text.Trim(' ') + "%'";
+                    break;
+                case "Search via email":
+                    searchUserDataSource.SelectCommand = "SELECT * FROM [user] WHERE [email] LIKE '%" + emailInput.Text.Trim(' ') + "%'";
+                    break;
+            }
+            searchUserListView.DataSource = searchUserDataSource;
+            searchUserListView.DataBind();
 
-            // 
         }
     }
 }

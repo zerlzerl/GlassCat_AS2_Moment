@@ -180,11 +180,11 @@
         </div>        
     </div>
     <div class="row">
-        <div class="col-md-2 col-md-offset-8">
-            <a target="_blank" class="btn btn-primary hideAdditionalBtn" href="/AdditionalPages/AddRecordsCode.aspx">Add Record</a>
+        <div class="col-md-2 col-md-offset-7">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" href="/AdditionalPages/AddRecordsCode.aspx">Add Record</a>
         </div>
-        <div class="col-md-2">
-            <a target="_blank" class="btn btn-success hideAdditionalBtn" href="/AdditionalPages/UserGridView.aspx">Click here to see all the users</a>
+        <div class="col-md-3">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" href="/AdditionalPages/UserGridView.aspx">Click here to see all the users</a>
         </div>
     </div>
     <script type="text/javascript">        
