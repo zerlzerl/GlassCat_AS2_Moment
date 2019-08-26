@@ -42,7 +42,45 @@ namespace GlassCat_AS2_Moment
                 }
                 
             }
-         
+
+            // display the moments
+            DefaultMomentSqlDataSource.SelectCommand = "SELECT * FROM[moment]";
+            DataView resultMoment = (DataView)DefaultMomentSqlDataSource.Select(DataSourceSelectArguments.Empty);
+            if (resultMoment.Count == 0) {
+                defaultMomentUsername.Text = "Tim";
+                defaultMomentUsericon.ImageUrl = "~/Resources/img/user1-128x128.jpg";
+                defaultMomentDatetime.Text = (string)"2019/7/13";
+                defaultMomentPhoto.ImageUrl = "~/Resources/img/cat2.jpg";
+                defaultMomentMessage.Text = "I like dogs too.";
+            } else
+            {
+
+                defaultMomentDatetime.Text = resultMoment[0]["datetime"].ToString();
+                defaultMomentPhoto.ImageUrl = (string)resultMoment[0]["photo"];
+                defaultMomentMessage.Text = (string)resultMoment[0]["message"];
+
+                string momentUserid = resultMoment[0]["user_id"].ToString();
+                DefaultSqlDataSource.SelectCommand = "SELECT * FROM[user] WHERE[id] = @userid";
+                // add parameters
+                DefaultSqlDataSource.SelectParameters.Clear(); // must clear the parameters first!
+                DefaultSqlDataSource.SelectParameters.Add("@userid", momentUserid);
+
+                //execute sql
+                DataView resultMomentUser = (DataView)DefaultSqlDataSource.Select(DataSourceSelectArguments.Empty);
+                
+                defaultMomentUsername.Text = (string)resultMomentUser[0]["username"];
+                if (resultMomentUser[0]["usericon"] == DBNull.Value)
+                {
+                    defaultMomentUsericon.ImageUrl = "~/Resources/img/user1-128x128.jpg";
+                }
+                else
+                {
+                    defaultMomentUsericon.ImageUrl = (string)resultMomentUser[0]["usericon"];
+                }
+                
+
+            }
+
         }
     }
 }

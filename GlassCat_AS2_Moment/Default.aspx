@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <asp:SqlDataSource ID="DefaultSqlDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="DefaultMomentSqlDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [moment]"></asp:SqlDataSource>
     <div class="jumbotron">
 
         <div style="text-align: center; margin-bottom: 40px;">
@@ -33,7 +34,7 @@
                         <h5 class="widget-user-desc"><asp:Label ID="defaultUserProfession" runat="server" Text="Label"></asp:Label></h5>
                     </div>
                     <div class="widget-user-image">
-                        <asp:Image CssClass="img-circle" ID="defaultUserPortrait" runat="server" />
+                        <asp:Image CssClass="img-circle" ID="defaultUserPortrait" runat="server" style="max-height:90px"/>
                         <%--<img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Avatar">--%>
                     </div>
                     <div class="box-footer">
@@ -83,14 +84,20 @@
                 <div class="row">
                     <div class="col-md-12">
 
+
                         <!-- to be iterated -->
                         <!-- Box Comment -->
                         <div class="box box-widget">
                             <div class="box-header with-border">
                                 <div class="user-block">
-                                    <img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Image">
-                                    <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
-                                    <span class="description">Shared publicly - 7:30 PM Today</span>
+                                    <%--<img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Image">--%>
+                                    <asp:Image ID="defaultMomentUsericon" CssClass="img-circle" runat="server" />
+                                    <span class="username"><a href="#">
+                                        <asp:Label ID="defaultMomentUsername" runat="server" Text="Label"></asp:Label>
+                                    </a></span>
+                                    <span class="description">
+                                        <asp:Label ID="defaultMomentDatetime" runat="server" Text="Label"></asp:Label>
+                                    </span>
                                 </div>
                                 <!-- /.user-block -->
                                 <div class="box-tools" style="position: absolute; right: 10px; top: 5px;">
@@ -106,45 +113,13 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <img class="img-responsive pad" src="/Resources/img/photo2.png" alt="Photo">
-
-                                <p>I took this photo this morning. What do you guys think?</p>
+                                <%--<img class="img-responsive pad" src="/Resources/img/photo2.png" alt="Photo">--%>
+                                <asp:Image ID="defaultMomentPhoto" CssClass="img-responsive pad" runat="server" />
+                                <p><asp:Label style="margin-left:10px;" ID="defaultMomentMessage" runat="server" Text="Label"></asp:Label></p>
                             </div>
                             <!-- /.box-body -->
                         </div>
                         <!-- /.box -->
-
-                        <!-- Box Comment -->
-                        <div class="box box-widget">
-                            <div class="box-header with-border">
-                                <div class="user-block">
-                                    <img class="img-circle" src="/Resources/img/user1-128x128.jpg" alt="User Image">
-                                    <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
-                                    <span class="description">Shared publicly - 7:30 PM Today</span>
-                                </div>
-                                <!-- /.user-block -->
-                                <div class="box-tools" style="position: absolute; right: 10px; top: 5px;">
-                                    <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Like">
-                                        <i class="fa fa-heart-o"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                                </div>
-                                <!-- /.box-tools -->
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <img class="img-responsive pad" src="/Resources/img/photo2.png" alt="Photo">
-
-                                <p>I took this photo this morning. What do you guys think?</p>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-
-
 
                     </div>
                 </div>
@@ -170,6 +145,10 @@
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
+
+    
+
+
 
 
     <div class="row">

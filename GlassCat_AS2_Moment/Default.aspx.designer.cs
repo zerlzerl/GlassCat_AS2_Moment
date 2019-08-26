@@ -22,6 +22,15 @@ namespace GlassCat_AS2_Moment {
         protected global::System.Web.UI.WebControls.SqlDataSource DefaultSqlDataSource;
         
         /// <summary>
+        /// DefaultMomentSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource DefaultMomentSqlDataSource;
+        
+        /// <summary>
         /// defaultUsername control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,51 @@ namespace GlassCat_AS2_Moment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label defaultUserMotto;
+        
+        /// <summary>
+        /// defaultMomentUsericon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image defaultMomentUsericon;
+        
+        /// <summary>
+        /// defaultMomentUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label defaultMomentUsername;
+        
+        /// <summary>
+        /// defaultMomentDatetime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label defaultMomentDatetime;
+        
+        /// <summary>
+        /// defaultMomentPhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image defaultMomentPhoto;
+        
+        /// <summary>
+        /// defaultMomentMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label defaultMomentMessage;
         
         /// <summary>
         /// ScriptManager1 control.
