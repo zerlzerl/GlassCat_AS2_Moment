@@ -40,7 +40,22 @@ namespace GlassCat_AS2_Moment.Pages
 
                 }
             }
-
+            
+            if (AttachmentUpload.HasFile)
+            {
+                // add attachment
+                string filePath = "~/user/files/";
+                string absoluteFilePath = Server.MapPath(filePath);
+                if (!System.IO.Directory.Exists(absoluteFilePath))
+                {
+                    // create upload file path
+                    System.IO.Directory.CreateDirectory(absoluteFilePath);
+                }
+                string fileName = AttachmentUpload.FileName;
+                AttachmentUpload.SaveAs(absoluteFilePath + fileName);
+                Attachment newAttachment = new Attachment(absoluteFilePath + fileName);
+                newEmailMsg.Attachments.Add(newAttachment);
+            }
             // get current users email
             // string username = HttpContext.Current.User.Identity.Name;
             // userEmailSearchDataSource.SelectCommand = "SELECT * FROM [user] WHERE [username] = '" + username + "'";

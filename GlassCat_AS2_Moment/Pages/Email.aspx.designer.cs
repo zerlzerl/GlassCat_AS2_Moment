@@ -85,6 +85,15 @@ namespace GlassCat_AS2_Moment.Pages {
         protected global::System.Web.UI.WebControls.TextBox ComposeTextbox;
         
         /// <summary>
+        /// AttachmentUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload AttachmentUpload;
+        
+        /// <summary>
         /// SendButton control.
         /// </summary>
         /// <remarks>

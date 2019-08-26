@@ -38,7 +38,7 @@
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="userContactDataSource" ConnectionString='<%$ ConnectionStrings:ConnectionString5 %>'
                         ProviderName='<%$ ConnectionStrings:ConnectionString5.ProviderName %>'
-                        SelectCommand="SELECT [email], [username], [gender], [profession] FROM [user]"></asp:SqlDataSource>
+                        SelectCommand="SELECT [email], [username], [gender], [profession] FROM [user] ORDER BY [username]"></asp:SqlDataSource>
                 </div>
                 <div class="form-group">
                     <asp:TextBox ID="SenderNameInput" CssClass="form-control" runat="server" placeholder="Sender Name" />
@@ -50,11 +50,7 @@
                     <asp:TextBox ID="ComposeTextbox" class="form-control" runat="server" TextMode="MultiLine" Rows="15"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <div class="btn btn-default btn-file">
-                        <i class="fa fa-paperclip"></i>Attachment
-                        <input type="file" name="attachment">
-                    </div>
-                    
+                    <asp:FileUpload ID="AttachmentUpload" runat="server" />
                     <div class="pull-right">
                         <asp:Button ID="SendButton" runat="server" Text="Send Mail" CssClass="btn btn-block btn-primary" OnClick="SendButton_Click"></asp:Button>
                     </div>
@@ -66,5 +62,12 @@
             <!-- /.box-body -->
         </div>
         <!-- /. box -->
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Pages/Email.aspx;~/Pages/Email.aspx.cs">Email</a>
+        </div>        
     </div>
 </asp:Content>
