@@ -10,6 +10,12 @@
 *.userosscache
 *.sln.docstates
 
+# ignore access db files
+*.accdb
+*.laccdb
+# ignore user portrial files
+user/portrial/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

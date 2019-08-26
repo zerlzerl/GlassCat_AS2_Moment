@@ -48,7 +48,7 @@ namespace GlassCat_AS2_Moment.Pages
             string password = registerPassword.Text;
             string passwordConfrim = registerPasswordConfirmation.Text;
 
-            string serverSavePath = "~/user/protrial/";
+            string serverSavePath = "~/user/portrial/";
             if (registerUserIconUpload.HasFile)
             {
                 string userProtrialPath = Server.MapPath(serverSavePath);
