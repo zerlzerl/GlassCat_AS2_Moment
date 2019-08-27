@@ -58,7 +58,7 @@
                     href="/AdditionalPages/DisplayCode.aspx?filenames=~/App_Themes/CommonDesign/SkinFile.skin">Skin</a>
             </div>
             <div class="col-md-2">
-                <asp:Button CssClass="btn btn-success btn-block hideAdditionalBtn" ID="shiftColorBtn" runat="server" Text="Light" onClick="shiftColorBtn_Click"/>
+                <asp:Button CssClass="btn btn-success btn-block hideAdditionalBtn" ID="shiftColorBtn" runat="server" Text="Dark" onClick="shiftColorBtn_Click"/>
             </div>
         </div>
     </div>
