@@ -46,4 +46,14 @@
         <strong>Calendar:</strong><p>You will get informed by browsing through this page if today has a big event.</p>
 
     
+    <div class="row">
+        <div class="col-md-2 col-md-offset-8">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/Resources/css/site.css">CSS</a>
+        </div>
+        <div class="col-md-2">
+            <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" 
+                href="/AdditionalPages/DisplayCode.aspx?filenames=~/App_Themes/CommonDesign/SkinFile.skin">Skin</a>
+        </div>
+    </div>
 </asp:Content>

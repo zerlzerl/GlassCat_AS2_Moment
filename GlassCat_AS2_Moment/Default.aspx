@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs"  Inherits="GlassCat_AS2_Moment.Default" %>
+﻿<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" Theme="CommonDesign" AutoEventWireup="true" CodeBehind="Default.aspx.cs"  Inherits="GlassCat_AS2_Moment.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
@@ -9,7 +9,7 @@
 
         <div style="text-align: center; margin-bottom: 40px;">
             <h2>GlassCat</h2>
-            <h3 style="color:coral">
+            <h3 style="color:orangered">
                 Cats are like glass, deserving special care.
             </h3>
         </div>
@@ -111,7 +111,7 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <asp:Button ID="postBtn" runat="server" Text="Post a moment now" onClick="postBtn_Click" CssClass="btn btn-block btn-primary"></asp:Button>
+                            <asp:Button ID="postBtn" skinid="btnSkin" runat="server" Text="Post now" onClick="postBtn_Click" CssClass="btn btn-block btn-primary"></asp:Button>
                         </div>
                         <!-- /.box-footer-->
                     </div>
@@ -190,7 +190,7 @@
                 <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
             </Triggers>
             <ContentTemplate>
-                <asp:AdRotator ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
+                <asp:AdRotator CssClass="img-responsive" ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>

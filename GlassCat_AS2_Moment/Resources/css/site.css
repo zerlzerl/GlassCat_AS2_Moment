@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
 
 /*a.hideAdditionalBtn {
@@ -9,4 +9,8 @@
 
 pre, code {
     white-space: pre-line;
+}
+
+.jumbotron {
+    margin-top: 20px;
 }

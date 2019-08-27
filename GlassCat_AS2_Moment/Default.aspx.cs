@@ -150,6 +150,7 @@ namespace GlassCat_AS2_Moment
 
                     //successLabel.Visible = true;
                     momentsDisplay();
+                    defaultPostMessage.Text = "";
                     //successLabel.Visible = false;
                 }
                 
