@@ -20,8 +20,9 @@ namespace GlassCat_AS2_Moment.Pages
                 SenderNameInput.Text = "";
             } else
             {
-                SenderNameInput.Text = username;                
+                SenderNameInput.Text = "GlassCat@126.com";                
             }
+            SenderNameInput.ReadOnly = true;
         }
 
         protected void SendButton_Click(object sender, EventArgs e)

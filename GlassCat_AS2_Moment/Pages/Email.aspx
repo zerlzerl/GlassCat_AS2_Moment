@@ -41,6 +41,7 @@
                         SelectCommand="SELECT [email], [username], [gender], [profession] FROM [user] ORDER BY [username]"></asp:SqlDataSource>
                 </div>
                 <div class="form-group">
+                    <asp:Label Text="From: " runat="server" CssClass="control-label" />
                     <asp:TextBox ID="SenderNameInput" CssClass="form-control" runat="server" placeholder="Sender Name" />
                 </div>
                 <div class="form-group">

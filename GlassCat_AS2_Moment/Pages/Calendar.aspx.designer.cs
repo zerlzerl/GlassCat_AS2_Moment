@@ -13,6 +13,15 @@ namespace GlassCat_AS2_Moment.Pages {
     public partial class Calendar {
         
         /// <summary>
+        /// eventSearchDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource eventSearchDataSource;
+        
+        /// <summary>
         /// SiteMapDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,41 @@ namespace GlassCat_AS2_Moment.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
+        
+        /// <summary>
+        /// EventCalendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar EventCalendar;
+        
+        /// <summary>
+        /// selectedEventDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label selectedEventDate;
+        
+        /// <summary>
+        /// selectedEventDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label selectedEventDescription;
+        
+        /// <summary>
+        /// futureEventList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater futureEventList;
     }
 }
