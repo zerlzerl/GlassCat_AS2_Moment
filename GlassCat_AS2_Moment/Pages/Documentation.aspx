@@ -24,8 +24,8 @@
         <strong>tutor’s name:</strong><p>Murray Mount</p>
         <br />
         <h3>3. Task Allocation</h3>
-        <strong>Sun Yeqing:</strong><p>Master Page; Home Page; About Us; Site Map; Documentation; Email</p>
-        <strong>Li Xuekai:</strong><p>Registration; User Records Display & Search; Login System; Calendar</p>
+        <strong>Sun Yeqing:</strong><p>Master Page; Home Page; About Us; Site Map; Documentation</p>
+        <strong>Li Xuekai:</strong><p>Registration; User Records Display & Search; Login System; Email; Calendar</p>
         <br />
         <h3>4. References</h3>
         <strong>Microsoft ASP.NET overview:</strong><p><a href="https://docs.microsoft.com/en-us/aspnet/overview">https://docs.microsoft.com/en-us/aspnet/overview</a></p>
