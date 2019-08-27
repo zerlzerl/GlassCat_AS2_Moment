@@ -13,5 +13,20 @@ namespace GlassCat_AS2_Moment.Pages
         {
 
         }
+        protected void shiftColorBtn_Click(object sender, EventArgs e)
+        {
+            Site masterPage = (Site)(Page.Master);
+            string hint = shiftColorBtn.Text;
+            if (hint == "Light")
+            {
+                shiftColorBtn.Text = "Dark";
+                masterPage.getPanel().BackColor = System.Drawing.Color.White;
+            }
+            else
+            {
+                shiftColorBtn.Text = "Light";
+                masterPage.getPanel().BackColor = System.Drawing.Color.Black;
+            }
+        }
     }
 }

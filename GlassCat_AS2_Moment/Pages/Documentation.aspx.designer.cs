@@ -29,5 +29,26 @@ namespace GlassCat_AS2_Moment.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
+        
+        /// <summary>
+        /// shiftColorBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button shiftColorBtn;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new GlassCat_AS2_Moment.Site Master {
+            get {
+                return ((GlassCat_AS2_Moment.Site)(base.Master));
+            }
+        }
     }
 }

@@ -22,3 +22,4 @@ Default skin template. The following skins are provided as examples only.
   skinid="btnSkin"
 />
 
+<asp:Panel runat="server" SkinId="panelSkin" BackColor="Black"/>

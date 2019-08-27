@@ -18,5 +18,10 @@ namespace GlassCat_AS2_Moment
         {
             
         }
+        
+        public Panel getPanel()
+        {
+            return this.Panel1;
+        }
     }
 }

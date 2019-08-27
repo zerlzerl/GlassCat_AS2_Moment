@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Documentation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Documentation.aspx.cs" Inherits="GlassCat_AS2_Moment.Pages.Documentation" %>
-
+<%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
@@ -48,13 +48,16 @@
 
 
         <div class="row">
-            <div class="col-md-2 col-md-offset-8">
+            <div class="col-md-2 col-md-offset-6">
                 <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn"
                     href="/AdditionalPages/DisplayCode.aspx?filenames=~/Resources/css/site.css">CSS</a>
             </div>
             <div class="col-md-2">
                 <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn"
                     href="/AdditionalPages/DisplayCode.aspx?filenames=~/App_Themes/CommonDesign/SkinFile.skin">Skin</a>
+            </div>
+            <div class="col-md-2">
+                <asp:Button CssClass="btn btn-success btn-block hideAdditionalBtn" ID="shiftColorBtn" runat="server" Text="Light" onClick="shiftColorBtn_Click"/>
             </div>
         </div>
     </div>

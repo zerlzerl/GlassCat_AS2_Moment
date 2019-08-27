@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <asp:Panel CssClass="panelBackground" SkinId="panelSkin" ID="Panel1" runat="server" Style="background:black">
+    <asp:Panel CssClass="panelBackground" SkinId="panelSkin" ID="Panel1" runat="server">
 
         <form runat="server">
             <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
@@ -80,7 +80,7 @@
                             <li class="<%: Page.Title == "Documentation" ? "active":"" %>"><a href="/Pages/Documentation.aspx"><asp:Label ID="Label4" Text="Documentation" runat="server" ToolTip="Go to Documentation"/></a></li>
                             <li class="<%: Page.Title == "Email" ? "active":"" %>"><a href="/Pages/Email.aspx"><asp:Label ID="Label5" Text="Email" runat="server" ToolTip="Go to Email"/></a></li>
                             <li class="<%: Page.Title == "Calendar" ? "active":"" %>"><a href="/Pages/Calendar.aspx"><asp:Label ID="Label6" Text="Calendar" runat="server" ToolTip="Go to Calendar"/></a></li>
-
+                            
                         </ul>
 
 
@@ -142,9 +142,6 @@
                 </div>
             </div>
 
-        
-
-        
 
             <script type="text/javascript" src="/Resources/jquery-1.12.4/jquery.min.js"></script>
             <script type="text/javascript" src="/Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
