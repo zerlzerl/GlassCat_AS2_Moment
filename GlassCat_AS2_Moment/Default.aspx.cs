@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections;
+using System.Threading.Tasks;
 
 namespace GlassCat_AS2_Moment
 {
@@ -34,7 +35,9 @@ namespace GlassCat_AS2_Moment
                 defaultUserProfession.Visible = false;
                 defaultUserMotto.Text = "Love me, love my cat.";
                 defaultUserPortrait.ImageUrl = "~/Resources/img/user1-128x128.jpg";
-            } else
+                
+            }
+            else
             {
                 DefaultSqlDataSource.SelectCommand = "SELECT * FROM[user] WHERE[username] = @username";
                 // add parameters
@@ -52,17 +55,24 @@ namespace GlassCat_AS2_Moment
                 {
                     defaultUserPortrait.ImageUrl = "~/Resources/img/user1-128x128.jpg";
                 }
-                else {
+                else
+                {
                     defaultUserPortrait.ImageUrl = (string)result[0]["usericon"];
                 }
-                
+
             }
 
             // dynamically display all the moments
-            DefaultMomentSqlDataSource.SelectCommand = "SELECT * FROM[moment]";
+            momentsDisplay();
+
+        }
+
+        protected void momentsDisplay() {
+            DefaultMomentSqlDataSource.SelectCommand = "SELECT * FROM[moment] ORDER by [datetime] DESC";
             DataView resultMoment = (DataView)DefaultMomentSqlDataSource.Select(DataSourceSelectArguments.Empty);
             ArrayList MomentList = new ArrayList();
-            for (int i = 0; i < resultMoment.Count; i++) {
+            for (int i = 0; i < resultMoment.Count; i++)
+            {
                 MomentObject moment = new MomentObject();
                 moment.userid = resultMoment[i]["user_id"].ToString();
 
@@ -85,49 +95,66 @@ namespace GlassCat_AS2_Moment
             }
             defaultMomentRepeater.DataSource = MomentList;
             defaultMomentRepeater.DataBind();
-
-          
-
-
-
-            // display the first moment
-            //DefaultMomentSqlDataSource.SelectCommand = "SELECT * FROM[moment]";
-            //DataView resultMoment = (DataView)DefaultMomentSqlDataSource.Select(DataSourceSelectArguments.Empty);
-            //if (resultMoment.Count == 0) {
-            //    defaultMomentUsername.Text = "Tim";
-            //    defaultMomentUsericon.ImageUrl = "~/Resources/img/user1-128x128.jpg";
-            //    defaultMomentDatetime.Text = (string)"2019/7/13";
-            //    defaultMomentPhoto.ImageUrl = "~/Resources/img/cat2.jpg";
-            //    defaultMomentMessage.Text = "I like dogs too.";
-            //} else
-            //{
-
-            //    defaultMomentDatetime.Text = resultMoment[0]["datetime"].ToString();
-            //    defaultMomentPhoto.ImageUrl = (string)resultMoment[0]["photo"];
-            //    defaultMomentMessage.Text = (string)resultMoment[0]["message"];
-
-            //    string momentUserid = resultMoment[0]["user_id"].ToString();
-            //    DefaultSqlDataSource.SelectCommand = "SELECT * FROM[user] WHERE[id] = @userid";
-            //    // add parameters
-            //    DefaultSqlDataSource.SelectParameters.Clear(); // must clear the parameters first!
-            //    DefaultSqlDataSource.SelectParameters.Add("@userid", momentUserid);
-
-            //    //execute sql
-            //    DataView resultMomentUser = (DataView)DefaultSqlDataSource.Select(DataSourceSelectArguments.Empty);
-
-            //    defaultMomentUsername.Text = (string)resultMomentUser[0]["username"];
-            //    if (resultMomentUser[0]["usericon"] == DBNull.Value)
-            //    {
-            //        defaultMomentUsericon.ImageUrl = "~/Resources/img/user1-128x128.jpg";
-            //    }
-            //    else
-            //    {
-            //        defaultMomentUsericon.ImageUrl = (string)resultMomentUser[0]["usericon"];
-            //    }
-
-
         }
 
+        protected void postBtn_Click(object sender, EventArgs e)
+        {
+            string username = HttpContext.Current.User.Identity.Name;
+            if (string.IsNullOrEmpty(username))
+            {
+                failLabel.Visible = true;
+                
+                //failLabel.Visible = false;
+            }
+            else {
+                string postMessage = defaultPostMessage.Text;
+                if (defaultPostPhotoUpload.HasFile)
+                {
+                    string relativePath = "~/user/postPhoto/";
+                    string absolutePath = Server.MapPath(relativePath);
+                    if (!System.IO.Directory.Exists(absolutePath))
+                    {
+                        // create upload file path
+                        System.IO.Directory.CreateDirectory(absolutePath);
+                    }
+                    // rename upload file
+                    int i = defaultPostPhotoUpload.FileName.LastIndexOf("."); // get the file extened name
+                    string exten = defaultPostPhotoUpload.FileName.Substring(i);
+                    string newFileName = Guid.NewGuid().ToString() + exten; // new file name
+                    string serverSavePath = absolutePath + newFileName; // absolute save path
+                    string virtualSavePath = relativePath + newFileName; // virtual http required path
+                                                                         // save to server
+                    defaultPostPhotoUpload.SaveAs(serverSavePath);
+
+
+                    DefaultSqlDataSource.SelectCommand = "SELECT * FROM[user] WHERE[username] = @username";
+                    // add parameters
+                    DefaultSqlDataSource.SelectParameters.Clear(); // must clear the parameters first!
+                    DefaultSqlDataSource.SelectParameters.Add("@username", username);
+
+                    //execute sql
+                    DataView result = (DataView)DefaultSqlDataSource.Select(DataSourceSelectArguments.Empty);
+                    string userid = result[0]["id"].ToString();
+
+                    DefaultMomentSqlDataSource.InsertCommand =
+                        "INSERT INTO [moment] " +
+                        "([user_id], [message], [photo], [datetime]) " +
+                        "VALUES " +
+                        "([@user_id], [@message], [@photo], [@datetime])";
+
+                    DefaultMomentSqlDataSource.InsertParameters.Add("@user_id", DbType.Int32, userid);
+                    DefaultMomentSqlDataSource.InsertParameters.Add("@message", postMessage);
+                    DefaultMomentSqlDataSource.InsertParameters.Add("@photo", virtualSavePath);
+                    DefaultMomentSqlDataSource.InsertParameters.Add("@datetime", DateTime.Now.ToString());
+                    DefaultMomentSqlDataSource.Insert();
+
+                    //successLabel.Visible = true;
+                    momentsDisplay();
+                    //successLabel.Visible = false;
+                }
+                
+            }
+
+        }
     }
-    
 }

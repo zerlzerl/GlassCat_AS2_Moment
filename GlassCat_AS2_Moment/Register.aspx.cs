@@ -48,24 +48,24 @@ namespace GlassCat_AS2_Moment.Pages
             string password = registerPassword.Text;
             string passwordConfrim = registerPasswordConfirmation.Text;
 
-            string serverSavePath = "~/user/portrial/";
+            string relativePath = "~/user/portrial/";
             if (registerUserIconUpload.HasFile)
             {
-                string userProtrialPath = Server.MapPath(serverSavePath);
-                if (!System.IO.Directory.Exists(userProtrialPath)) 
+                string absolutePath = Server.MapPath(relativePath);
+                if (!System.IO.Directory.Exists(absolutePath)) 
                 {
                     // create upload file path
-                    System.IO.Directory.CreateDirectory(userProtrialPath);
+                    System.IO.Directory.CreateDirectory(absolutePath);
                 }
                 // rename upload file
                 int i = registerUserIconUpload.FileName.LastIndexOf("."); // get the file extened name
                 string exten = registerUserIconUpload.FileName.Substring(i);
                 string newFileName = Guid.NewGuid().ToString() + exten; // new file name
-                string savePath = userProtrialPath + newFileName; // absolute save path
-                string virtualSavePath = serverSavePath + newFileName; // virtual http required path
+                string serverSavePath = absolutePath + newFileName; // absolute save path
+                string virtualSavePath = relativePath + newFileName; // virtual http required path
 
                 // save to server
-                registerUserIconUpload.SaveAs(savePath);
+                registerUserIconUpload.SaveAs(serverSavePath);
 
                 // show on the page
                 registerPortraitPreview.ImageUrl = virtualSavePath;

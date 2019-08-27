@@ -76,6 +76,50 @@
                     </div>
                 </div>
                 <!-- /.widget-user -->
+
+
+                <!-- DIRECT CHAT PRIMARY -->
+                <asp:Panel ID="postPanel" runat="server">
+                    <div class="box box-primary direct-chat direct-chat-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Share something here...</h3>
+
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="form-group">
+                                <asp:TextBox style="font-size:20px;" ID="defaultPostMessage" class="form-control" runat="server" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                                <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="defaultPostMessage"
+                                Display="Dynamic" ErrorMessage="Error: Message cannot be empty" /> 
+                            </div>
+                            <div style="padding-left:10px; padding-right:10px">
+                                 <div class="form-group">
+                                    <asp:FileUpload ID="defaultPostPhotoUpload" runat="server" />
+                                    <asp:RequiredFieldValidator runat="server" CssClass="label label-warning" ControlToValidate="defaultPostPhotoUpload"
+                                    Display="Dynamic" ErrorMessage="Error: Photo cannot be empty" />  
+                                </div>
+                                <asp:Label ID="successLabel" runat="server" CssClass="label label-success" Text="Moment successfully post" Visible="false"></asp:Label>
+                                <asp:Label ID="failLabel" runat="server" CssClass="label label-warning" Text="Please login first" Visible="false"></asp:Label>
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <asp:Button ID="postBtn" runat="server" Text="Post a moment now" onClick="postBtn_Click" CssClass="btn btn-block btn-primary"></asp:Button>
+                        </div>
+                        <!-- /.box-footer-->
+                    </div>
+                    <!--/.direct-chat -->
+                </asp:Panel>
+                
+
+
             </div>
 
             <!-- Cards -->
@@ -103,9 +147,9 @@
                                         </div>
                                         <!-- /.user-block -->
                                         <div class="box-tools" style="position: absolute; right: 10px; top: 5px;">
-                                            <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Like">
+                                            <%--<button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Like">
                                                 <i class="fa fa-heart-o"></i>
-                                            </button>
+                                            </button>--%>
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                                 <i class="fa fa-minus"></i>
                                             </button>
@@ -116,7 +160,7 @@
                                     <!-- /.box-header -->
                                     <div class="box-body">
                                         <%--<img class="img-responsive pad" src="/Resources/img/photo2.png" alt="Photo">--%>
-                                        <asp:Image ID="defaultMomentPhoto" CssClass="img-responsive pad" runat="server" ImageUrl="<%#((MomentObject)Container.DataItem).photoUrl%>" />
+                                        <asp:Image style="max-height:491px;" ID="defaultMomentPhoto" CssClass="img-responsive pad" runat="server" ImageUrl="<%#((MomentObject)Container.DataItem).photoUrl%>" />
                                         <p><asp:Label style="margin-left:10px;" ID="defaultMomentMessage" runat="server" Text="<%#((MomentObject)Container.DataItem).message%>"></asp:Label></p>
                                     </div>
                                     <!-- /.box-body -->
