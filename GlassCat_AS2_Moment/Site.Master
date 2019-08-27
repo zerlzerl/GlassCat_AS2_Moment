@@ -19,19 +19,11 @@
 
     <title><%: Page.Title %> - GlassCat</title>
     <%--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
-    <style type="text/css">
-        p {
-            font-size: 20px;
-        }
-        strong {
-            font-size:18px;
-        }
 
-    </style>
 
 </head>
 <body>
-    <asp:Panel ID="Panel1" runat="server" Style="background:black">
+    <asp:Panel CssClass="panelBackground" SkinId="panelSkin" ID="Panel1" runat="server" Style="background:black">
 
         <form runat="server">
             <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
@@ -130,7 +122,7 @@
 
             <div class="row">
                 <div class="col-md-2">
-                    dddd
+                   
                 </div>
 
                 <div class="container body-content col-md-8">
@@ -146,7 +138,7 @@
                 </div>
 
                 <div class="col-md-2">
-                    ffffff
+                    
                 </div>
             </div>
 

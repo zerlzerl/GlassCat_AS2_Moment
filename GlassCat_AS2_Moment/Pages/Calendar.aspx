@@ -7,13 +7,13 @@
     <asp:SqlDataSource ID="eventSearchDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString7 %>'
         ProviderName='<%$ ConnectionStrings:ConnectionString7.ProviderName %>' SelectCommand="SELECT * FROM [event]"></asp:SqlDataSource>
 
-    <div style="background-color: #f0f0f0; padding: 10px; font-size: 16px;">
+    <div class="breadcrumbs">
         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
         <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" --> ">
         </asp:SiteMapPath>
     </div>
 
-    <div class="jumbotron" style="margin-top: 20px;">
+    <div class="jumbotron">
         <div class="row">
             <div class="col-md-8">
                 <asp:Calendar ID="EventCalendar" runat="server" BackColor="White" BorderColor="#AFAFAF" BorderStyle="Solid" BorderWidth="2px"

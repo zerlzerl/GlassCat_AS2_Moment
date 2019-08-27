@@ -6,7 +6,7 @@
     <asp:SqlDataSource ID="userEmailSearchDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString6 %>' 
         ProviderName='<%$ ConnectionStrings:ConnectionString6.ProviderName %>' SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
     <div class="row">
-        <div style="background-color: #f0f0f0; padding: 10px; font-size: 16px;">
+        <div class="breadcrumbs">
             <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
             <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" --> ">
             </asp:SiteMapPath>

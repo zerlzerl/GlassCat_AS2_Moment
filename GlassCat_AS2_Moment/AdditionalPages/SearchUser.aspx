@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <div class="row">
+    <div class="jumbotron">
+        <div class="row">
         <div class="col-xs-2 form-group">
             <label for="userIdInput" class="control-label h4">User ID: &nbsp;</label>
         </div>
@@ -97,4 +98,6 @@
                 href="/AdditionalPages/DisplayCode.aspx?filenames=~/AdditionalPages/SearchUser.aspx;~/AdditionalPages/SearchUser.aspx.cs">Search Records</a>
         </div>        
     </div>
+    </div>
+    
 </asp:Content>

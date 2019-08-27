@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <asp:Repeater ID="CodesReqeater" runat="server">
         <ItemTemplate>
-            <div class="panel panel-default" style="width: 100%">
+            <div class="panel panel-default" style="width: 100%; margin-top:20px">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <asp:Label ID="FileName" runat="server" Text="<%# ((CodeObject)Container.DataItem).filename %>" />

@@ -181,19 +181,23 @@
 
         
     </div>
-    
-    <div style="text-align: center; margin-bottom:20px">
-        <asp:ScriptManager ID="ScriptManager1" runat="server" />
-        <asp:Timer ID="Timer1" Interval="2000" runat="server" />
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
-            </Triggers>
-            <ContentTemplate>
-                <asp:AdRotator CssClass="img-responsive" ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
-            </ContentTemplate>
-        </asp:UpdatePanel>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <div style="text-align: center; margin-bottom:20px">
+                <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                <asp:Timer ID="Timer1" Interval="2000" runat="server" />
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                    </Triggers>
+                    <ContentTemplate>
+                        <asp:AdRotator CssClass="img-responsive" ID="AdRotator1" runat="server" Target="_blank" AdvertisementFile="~/AdFile1.xml" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+        </div>
     </div>
+    
 
     
 
@@ -201,13 +205,14 @@
 
 
     <div class="row">
-        <div class="col-md-3 col-md-offset-3">
+        
+        <div class="col-md-3 col-md-offset-3" style="color:LightSteelBlue">
             QUICK LINK
             <a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.html">
                 <p>Monash course disclaimer</p>
             </a>
         </div>
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-3 col-md-offset-1" style="color:LightSteelBlue">
             CONTACT US
             <a href="mailto:ysun0069@student.monash.edu">
                 <p>ysun0069@student.monash.edu</p>

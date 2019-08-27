@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <div class="row">
+    <div class="jumbotron">
+        <div class="row">
         <div class="col-md-12">
             <div class="table-responsive">
                 <asp:GridView ID="userGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="GlassCat_AS2" 
@@ -50,4 +51,6 @@
             <a target="_blank" class="btn btn-primary btn-block hideAdditionalBtn" href="/AdditionalPages/SearchUser.aspx">Search User</a>
         </div>
     </div>
+    </div>
+    
 </asp:Content>
