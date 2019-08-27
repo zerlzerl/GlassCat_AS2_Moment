@@ -81,4 +81,6 @@
                 href="/AdditionalPages/DisplayCode.aspx?filenames=~/Pages/Calendar.aspx;~/Pages/Calendar.aspx.cs">Calendar</a>
         </div>
     </div>
+    <div id="bodyPaddingDiv"></div>
+    
 </asp:Content>

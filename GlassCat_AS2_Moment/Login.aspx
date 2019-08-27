@@ -70,4 +70,6 @@
                 href="/AdditionalPages/DisplayCode.aspx?filenames=~/Login.aspx;~/Login.aspx.cs;~/Web.config;~/Pages/Web.config">Login</a>
         </div>        
     </div>
+    <div id="bodyPaddingDiv"></div>
+    
 </asp:Content>

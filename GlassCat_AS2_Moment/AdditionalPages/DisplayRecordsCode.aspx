@@ -14,4 +14,6 @@
             </ItemTemplate>
         </asp:DataList>
     </div>
+    <div id="bodyPaddingDiv"></div>
+    
 </asp:Content>

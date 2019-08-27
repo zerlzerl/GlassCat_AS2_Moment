@@ -99,5 +99,6 @@
         </div>        
     </div>
     </div>
+    <div id="bodyPaddingDiv"></div>
     
 </asp:Content>
