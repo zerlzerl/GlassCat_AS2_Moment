@@ -4,6 +4,7 @@
 
 <html>
 <head runat="server">
+    <meta name="author" content="Sun Yeqing"><!-- just master page -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,7 @@
     <link type="text/css" rel="stylesheet" href="~/Resources/font-awesome/css/font-awesome.min.css" />
     <link type="text/css" rel="stylesheet" href="~/Resources/css/site.css" />
     <!-- common style sheet for the whole site -->
-
+    
     <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 

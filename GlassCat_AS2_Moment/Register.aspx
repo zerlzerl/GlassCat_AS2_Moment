@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="GlassCat_AS2_Moment.Pages.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <meta name="author" content="Li Xuekai">
     <style type="text/css">
         .rbl input[type="radio"] {
             margin-left: 10px;

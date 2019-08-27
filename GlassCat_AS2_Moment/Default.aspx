@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" Theme="CommonDesign" AutoEventWireup="true" CodeBehind="Default.aspx.cs"  Inherits="GlassCat_AS2_Moment.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <meta name="author" content="Sun Yeqing">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <asp:SqlDataSource ID="DefaultSqlDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
