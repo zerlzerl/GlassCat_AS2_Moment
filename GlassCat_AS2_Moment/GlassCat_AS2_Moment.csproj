@@ -95,6 +95,7 @@
     <Content Include="Resources\bootstrap-3.3.7-dist\js\bootstrap.js" />
     <Content Include="Resources\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
     <Content Include="Resources\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="Resources\css\calendar.css" />
     <Content Include="Resources\css\site.css" />
     <Content Include="Resources\font-awesome\css\font-awesome.css" />
     <Content Include="Resources\font-awesome\css\font-awesome.min.css" />
@@ -112,9 +113,17 @@
     <Content Include="Resources\img\666.jpg" />
     <Content Include="Resources\img\adoptCat.png" />
     <Content Include="Resources\img\careCat.png" />
+    <Content Include="Resources\img\cat1.jpg" />
+    <Content Include="Resources\img\cat2.jpg" />
+    <Content Include="Resources\img\cat3.jpg" />
+    <Content Include="Resources\img\cat4.jpg" />
+    <Content Include="Resources\img\cat5.jpg" />
+    <Content Include="Resources\img\cat6.jpg" />
     <Content Include="Resources\img\feedCat.png" />
     <Content Include="Resources\img\photo2.png" />
     <Content Include="Resources\img\user1-128x128.jpg" />
+    <Content Include="Resources\img\微信图片_20190826111250.jpg" />
+    <Content Include="Resources\img\微信图片_201908261112503.jpg" />
     <Content Include="Resources\jquery-1.12.4\jquery.js" />
     <Content Include="Resources\jquery-1.12.4\jquery.min.js" />
     <Content Include="Web.config" />
@@ -259,6 +268,7 @@
     <Content Include="Resources\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Resources\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Pages\Web.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
