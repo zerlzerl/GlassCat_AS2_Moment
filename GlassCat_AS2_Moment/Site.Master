@@ -157,7 +157,6 @@
         $(document).ready(function () {            
             var windowHeight = $(window).height();
             var panelHeight = $('#Panel1').height();
-            var bodyHeight = $(document.body).height();
             var footerHeight = $('footer').height();
             //alert("windowHeight: " + windowHeight + " | bodyHeight: " + bodyHeight + " | footerHeight: " + footerHeight);
             var paddingHeight = windowHeight - panelHeight - footerHeight - 21;
