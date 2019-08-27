@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <%--<link type="text/css" rel="stylesheet" href="~/Resources/css/calendar.css" />--%>
+    <meta name="author" content="Li Xuekai">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <asp:SqlDataSource ID="eventSearchDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString7 %>'
